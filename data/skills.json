@@ -1,0 +1,87 @@
+{
+    "skills": [
+        {
+            "title": "Core Languages",
+            "badges": [
+                { "name": "C#", "icon": "csharp" },
+                { "name": "Java", "icon": "java" },
+                { "name": "JavaScript", "icon": "javascript" },
+                { "name": "TypeScript", "icon": "typescript" },
+                { "name": "PHP", "icon": "php" }
+            ]
+        },
+        {
+            "title": "Frontend & UI",
+            "badges": [
+                { "name": "Angular", "icon": "angularjs" },
+                { "name": "HTML5", "icon": "html5" },
+                { "name": "CSS3", "icon": "css3" },
+                { "name": "Bootstrap", "icon": "bootstrap" },
+                { "name": "Tailwind CSS", "icon": "tailwindcss" }
+            ]
+        },
+        {
+            "title": "Backend & Web Development",
+            "badges": [
+                { "name": "Node.js", "icon": "nodejs" },
+                { "name": "Express.js", "icon": "express" },
+                { "name": "Handlebars (HBS)", "icon": "handlebars" }
+            ]
+        },
+        {
+            "title": "Microsoft Stack",
+            "badges": [
+                { "name": "ASP.NET Core", "icon": "dotnetcore" },
+                {
+                    "name": "Entity Framework Core",
+                    "icon": "entityframeworkcore"
+                },
+                { "name": "Razor", "icon": "entityframeworkcore" }
+            ]
+        },
+        {
+            "title": "Enterprise Java",
+            "badges": [
+                { "name": "Servlets", "icon": "java" },
+                { "name": "JSP", "icon": "java" },
+                { "name": "JSTL", "icon": "java" },
+                { "name": "JPA (Hibernate)", "icon": "hibernate" }
+            ]
+        },
+        {
+            "title": "Databases",
+            "badges": [
+                { "name": "SQL Server", "icon": "microsoftsqlserver" },
+                { "name": "MySQL", "icon": "mysql" },
+                { "name": "MongoDB", "icon": "mongodb" }
+            ]
+        },
+        {
+            "title": "Tools & IDEs",
+            "badges": [
+                { "name": "Visual Studio", "icon": "visualstudio" },
+                { "name": "VS Code", "icon": "vscode" },
+                { "name": "IntelliJ IDEA", "icon": "intellij" }
+            ]
+        },
+        {
+            "title": "Version Control",
+            "badges": [
+                { "name": "Git", "icon": "git" },
+                { "name": "GitHub", "icon": "github" }
+            ]
+        },
+        {
+            "title": "CLI & Scripting",
+            "badges": [{ "name": "Bash", "icon": "bash" }]
+        },
+        {
+            "title": "Learning & Exploring",
+            "badges": [
+                { "name": "Python", "icon": "python" },
+                { "name": "Vue.js", "icon": "vuejs" },
+                { "name": "Laravel", "icon": "laravel" }
+            ]
+        }
+    ]
+}

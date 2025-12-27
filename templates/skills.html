@@ -1,0 +1,43 @@
+<section id="skills" class="py-5 bg-light">
+    <div class="container">
+        <div class="mb-5">
+            <div class="text-uppercase small text-muted mb-1">
+                Technical Skills
+            </div>
+
+            <h2>
+                <span class="border-bottom border-3 border-success pb-2">
+                Development Stack
+                </span>
+            </h2>
+        </div>
+
+        <!-- 3-Column Grid -->
+        <div class="row">
+            {{#each skills}}
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="h-100 p-4 bg-white rounded shadow-sm">
+                    <!-- Category Header -->
+                    <h4 class="text-primary mb-4 fw-bold">{{title}}</h4>
+                    
+                    <!-- Skill Icons with Labels - SVG VERSION -->
+                    <div class="skills-grid d-flex flex-wrap gap-3">
+                        {{#each badges}}
+                        <div class="skill-item d-flex flex-column align-items-center text-center">
+                            <!-- SVG Icon -->
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/{{icon}}/{{icon}}-original.svg" 
+                                 width="48" height="48"
+                                 class="mb-2 skill-icon-svg"
+                                 alt="{{name}} icon"
+                                 loading="lazy">
+                            <!-- Skill Name -->
+                            <span class="skill-name small fw-medium">{{name}}</span>
+                        </div>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</section>

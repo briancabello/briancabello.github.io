@@ -1,0 +1,10 @@
+{
+    "siteName": "Brian Cabello Portfolio",
+    "baseUrl": "/",
+    "language": "en",
+    "timezone": "America/Moncton",
+    "analytics": {
+        "enabled": false,
+        "trackingId": ""
+    }
+}

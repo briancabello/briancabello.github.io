@@ -1,0 +1,14 @@
+{
+    "education": {
+        "currentEducation": {
+            "program": "Information Technology Software Development",
+            "institution": "New Brunswick Community College (NBCC)",
+            "period": "Sep 2024 – Present"
+        },
+        "additionalEducation": [
+            "Associate in Hospitality Management – Philippine School of Science & Technology",
+            "Computer Hardware Servicing NCII – DATS Actual Technical Training Center",
+            "Bachelor of Science in Information Technology – Liceo de Cagayan University"
+        ]
+    }
+}

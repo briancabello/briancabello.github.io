@@ -1,0 +1,27 @@
+<section id="education" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="mb-5"><span class="border-bottom border-3 border-success pb-2">Education</span></h2>
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="card border mb-4">
+                    <div class="card-body">
+                        <h4 class="card-title text-primary">{{education.currentEducation.program}}</h4>
+                        <h6 class="text-muted">{{education.currentEducation.institution}}</h6>
+                        <p class="text-muted mb-0">{{education.currentEducation.period}}</p>
+                    </div>
+                </div>
+                
+                <div class="card border">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary mb-3">Additional Education</h5>
+                        <ul class="mb-0">
+                            {{#each education.additionalEducation}}
+                            <li class="mb-2">{{this}}</li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

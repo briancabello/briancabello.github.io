@@ -1,0 +1,25 @@
+{
+    "experiences": [
+        {
+            "position": "Cultivation IPM Operator",
+            "company": "OrganiGram Inc.",
+            "responsibilities": []
+        },
+        {
+            "position": "Assistant General Manager",
+            "company": "Wendy's Company",
+            "responsibilities": [
+                "Hired, trained, and supervised a staff of 20+ in a high-volume environment",
+                "Developed a disciplined, result-driven work ethic focused on high standards"
+            ]
+        },
+        {
+            "position": "Information Technology Associate",
+            "company": "SM Mart, Inc.",
+            "responsibilities": [
+                "Provided technical support for POS systems, servers, and network equipment",
+                "Assisted in testing and debugging new software applications"
+            ]
+        }
+    ]
+}
