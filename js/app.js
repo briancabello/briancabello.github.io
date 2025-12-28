@@ -1,4 +1,3 @@
-// Main Application with Handlebars
 class PortfolioApp {
     constructor() {
         this.templates = {};
@@ -73,7 +72,7 @@ class PortfolioApp {
     }
 
     initUI() {
-        // Smooth scrolling only
+        // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();

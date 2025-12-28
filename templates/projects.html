@@ -1,41 +1,75 @@
 <section id="projects" class="py-5">
-    <div class="container">
-        <h2 class="mb-5"><span class="border-bottom border-3 border-success pb-2">Projects</span></h2>
-        <div class="row">
-            {{#each projects}}
-            <div class="col-lg-6 mb-4">
-                <div class="card h-100 border">
-                    <div class="card-header bg-primary text-white">
-                        <h4 class="mb-0">{{title}}</h4>
-                    </div>
-                    <div class="card-body">
-                        <p class="card-text mb-4">{{description}}</p>
-                        
-                        <h6 class="text-secondary">Tech Stack:</h6>
-                        <div class="mb-4">
-                            {{#each techStack}}
-                            <span class="badge border border-primary-subtle text-success me-1 mb-2">{{this}}</span>
-                            {{/each}}
-                        </div>
-                        
-                        <h6 class="text-secondary">Key Features:</h6>
-                        <ul class="mb-0">
-                            {{#each features}}
-                            <li class="mb-1">{{{this}}}</li>
-                            {{/each}}
-                        </ul>
-                    </div>
-                    {{#if demoUrl}}
-                    <div class="card-footer bg-transparent border-top-0">
-                        <a href="{{demoUrl}}" target="_blank" class="btn btn-sm btn-outline-primary">View Demo</a>
-                        {{#if githubUrl}}
-                        <a href="{{githubUrl}}" target="_blank" class="btn btn-sm btn-outline-secondary ms-2">GitHub</a>
-                        {{/if}}
-                    </div>
-                    {{/if}}
-                </div>
-            </div>
-            {{/each}}
-        </div>
+  <div class="container">
+    <div class="mb-5">
+      <div class="text-uppercase small text-muted mb-1">Portfolio</div>
+      <h2 class="mb-0">
+        <span class="border-bottom border-3 border-success pb-2">Projects</span>
+      </h2>
     </div>
+
+    <div class="row g-4">
+      {{#each projects}}
+      <div class="col-lg-6">
+        <article class="project-card card h-100 border-0 shadow-sm bg-body">
+
+          <div class="card-body p-4">
+            <div class="d-flex align-items-start justify-content-between gap-3 mb-2">
+              <h3 class="h5 fw-bold mb-0 project-title">{{title}}</h3>
+
+              {{#if status}}
+              <span class="badge rounded-pill text-bg-success-subtle border border-success-subtle">
+                {{status}}
+              </span>
+              {{/if}}
+            </div>
+
+            <p class="text-body-secondary mb-4 project-desc">
+              {{description}}
+            </p>
+
+            {{#if techStack}}
+            <div class="mb-4">
+              <div class="text-uppercase small text-muted mb-2">Tech Stack</div>
+              <div class="d-flex flex-wrap gap-2">
+                {{#each techStack}}
+                <span class="badge project-badge">{{this}}</span>
+                {{/each}}
+              </div>
+            </div>
+            {{/if}}
+
+            {{#if features}}
+            <div class="mb-0">
+              <div class="text-uppercase small text-muted mb-2">Key Features</div>
+              <ul class="project-features mb-0">
+                {{#each features}}
+                <li>{{{this}}}</li>
+                {{/each}}
+              </ul>
+            </div>
+            {{/if}}
+          </div>
+
+          {{#if demoUrl}}
+          <div class="card-footer bg-transparent border-0 pt-0 pb-4 px-4">
+            <div class="d-flex gap-2 flex-wrap">
+              <a href="{{demoUrl}}" target="_blank" class="btn btn-sm btn-success">
+                <i class="fa-solid fa-arrow-up-right-from-square me-1"></i>
+                Live Demo
+              </a>
+
+              {{#if githubUrl}}
+              <a href="{{githubUrl}}" target="_blank" class="btn btn-sm btn-outline-secondary">
+                <i class="fa-brands fa-github me-1"></i>
+                GitHub
+              </a>
+              {{/if}}
+            </div>
+          </div>
+          {{/if}}
+        </article>
+      </div>
+      {{/each}}
+    </div>
+  </div>
 </section>

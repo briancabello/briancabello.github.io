@@ -1,26 +1,32 @@
 <section id="experience" class="py-5">
-    <div class="container">
-        <h2 class="mb-5"><span class="border-bottom border-3 border-success pb-2">Work Experience</span></h2>
-        <div class="row">
-            <div class="col-lg-8">
-                {{#each experiences}}
-                <div class="card border mb-4">
-                    <div class="card-body">
-                        <h4 class="card-title text-primary">{{position}}</h4>
-                        <h6 class="text-muted">{{company}}</h6>
-                        <p class="text-muted">{{period}}</p>
-                        {{#if responsibilities.length}}
-                        <h6 class="text-secondary mt-3">Responsibilities:</h6>
-                        <ul class="mb-0">
-                            {{#each responsibilities}}
-                            <li class="mb-2">{{this}}</li>
-                            {{/each}}
-                        </ul>
-                        {{/if}}
-                    </div>
-                </div>
-                {{/each}}
-            </div>
+  <div class="container">
+    <h2 class="mb-5">
+      <span class="border-bottom border-3 border-success pb-2">Work Experience</span>
+    </h2>
+
+    <div class="row">
+      <div class="col-lg-8">
+
+        {{#each experiences}}
+        <div class="card shadow-sm border-0 mb-4">
+          <div class="card-body p-4">
+            <h4 class="card-title mb-1">{{position}}</h4>
+            <div class="text-muted">{{company}}</div>
+            <div class="text-muted mt-2">{{period}}</div>
+
+            {{#if responsibilities.length}}
+            <h6 class="text-secondary mt-3 mb-2">Responsibilities</h6>
+            <ul class="mb-0 ps-3">
+              {{#each responsibilities}}
+              <li class="mb-2">{{this}}</li>
+              {{/each}}
+            </ul>
+            {{/if}}
+          </div>
         </div>
+        {{/each}}
+
+      </div>
     </div>
+  </div>
 </section>

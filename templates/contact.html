@@ -1,57 +1,63 @@
-<section id="contact" class="py-5 bg-light">
-    <div class="container">
-        <div class="mb-5">
-            <div class="text-uppercase small text-muted mb-1">
-                Let's Connect
-            </div>
+<section id="contact" class="py-5">
+  <div class="container">
+    <div class="mb-5">
+      <div class="text-uppercase small text-muted mb-1">Let's Connect</div>
 
-            <h2>
-                <span class="border-bottom border-3 border-success pb-2">
-                Contact
-                </span>
-            </h2>
-        </div>
-        <div class="row">
-            <div class="col-md-10 mx-auto">
-                <div class="row">
-                    <div class="col-md-3 col-6 mb-4">
-                        <div class="contact-info text-center">
-                            <div class="contact-icon mb-3">
-                                <i class="bi bi-envelope text-primary" style="font-size: 2rem;"></i>
-                            </div>
-                            <h5 class="text-secondary">Email</h5>
-                            <a href="mailto:{{contact.emails}}" class="d-block text-decoration-none mb-2">{{contact.emails}}</a>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-6 mb-4">
-                        <div class="contact-info text-center">
-                            <div class="contact-icon mb-3">
-                                <i class="bi bi-phone text-primary" style="font-size: 2rem;"></i>
-                            </div>
-                            <h5 class="text-secondary">Phone</h5>
-                            <a href="tel:{{contact.phone}}" class="d-block text-decoration-none">{{contact.phone}}</a>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-6 mb-4">
-                        <div class="contact-info text-center">
-                            <div class="contact-icon mb-3">
-                                <i class="bi bi-linkedin text-primary" style="font-size: 2rem;"></i>
-                            </div>
-                            <h5 class="text-secondary">LinkedIn</h5>
-                            <a href="{{contact.linkedin}}" target="_blank" class="d-block text-decoration-none">linkedin.com/in/briancabs</a>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-6 mb-4">
-                        <div class="contact-info text-center">
-                            <div class="contact-icon mb-3">
-                                <i class="bi bi-geo-alt text-primary" style="font-size: 2rem;"></i>
-                            </div>
-                            <h5 class="text-secondary">Location</h5>
-                            <p class="mb-0">{{contact.location}}</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+      <h2>
+        <span class="border-bottom border-3 border-success pb-2">
+          Contact
+        </span>
+      </h2>
     </div>
+
+    <div class="row">
+      <div class="col-md-10 mx-auto">
+        <div class="row">
+
+          <div class="col-md-3 col-6 mb-4">
+            <div class="contact-info text-center">
+              <div class="contact-icon mb-3">
+                <i class="fa-solid fa-envelope text-primary" style="font-size: 2rem;"></i>
+              </div>
+              <h5 class="text-secondary">Email</h5>
+              <a href="mailto:{{contact.email}}" class="d-block text-decoration-none mb-2">{{contact.email}}</a>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-6 mb-4">
+            <div class="contact-info text-center">
+              <div class="contact-icon mb-3">
+                <i class="fa-solid fa-phone text-primary" style="font-size: 2rem;"></i>
+              </div>
+              <h5 class="text-secondary">Phone</h5>
+              <a href="tel:{{contact.phone}}" class="d-block text-decoration-none">{{contact.phone}}</a>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-6 mb-4">
+            <div class="contact-info text-center">
+              <div class="contact-icon mb-3">
+                <i class="fa-brands fa-linkedin-in text-primary" style="font-size: 2rem;"></i>
+              </div>
+              <h5 class="text-secondary">LinkedIn</h5>
+              <a href="{{contact.linkedin}}" target="_blank" class="d-block text-decoration-none">
+                linkedin.com/in/briancabs
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-6 mb-4">
+            <div class="contact-info text-center">
+              <div class="contact-icon mb-3">
+                <i class="fa-solid fa-location-dot text-primary" style="font-size: 2rem;"></i>
+              </div>
+              <h5 class="text-secondary">Location</h5>
+              <p class="mb-0">{{contact.location}}</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
