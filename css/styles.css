@@ -486,4 +486,9 @@ footer a {
     .card-body {
         padding: 1.5rem !important;
     }
+
+    /* Hide the </> brand icon on mobile */
+    .navbar-brand span.text-success {
+        display: none;
+    }
 }
