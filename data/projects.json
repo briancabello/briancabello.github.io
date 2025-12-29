@@ -2,7 +2,8 @@
     "projects": [
         {
             "title": "Campus Bites",
-            "description": "A multi-page web application designed for students to browse, create, manage, and publish recipes.",
+            "status": "Academic Project",
+            "description": "A multi-page web application designed for students to browse, create, manage, and publish recipes. This project focuses on complex data relationships and role-based security.",
             "techStack": [
                 "C#",
                 "ASP.NET Core MVC",
@@ -16,9 +17,10 @@
                 "<strong>Approval Workflow:</strong> Built a logic flow where recipes move from \"Draft\" to \"Pending\" to \"Published\"",
                 "<strong>Data Integrity:</strong> Utilized Entity Framework Core to manage complex relationships between Users, Recipes, Ingredients, and Categories",
                 "<strong>Admin Moderation:</strong> System for reviewing uploaded images and ingredients before public visibility",
-                "<strong>Search Functionality:</strong> Filter recipes by category and ingredients",
-                "<strong>Business Logic:</strong> Implemented strict rules, including image segregation for admin inspection before public display"
-            ]
+                "<strong>Search Functionality:</strong> Filter recipes by category and ingredients"
+            ],
+            "demoUrl": null,
+            "githubUrl": null
         }
     ]
 }

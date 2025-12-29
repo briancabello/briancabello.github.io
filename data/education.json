@@ -3,12 +3,26 @@
         "currentEducation": {
             "program": "Information Technology Software Development",
             "institution": "New Brunswick Community College (NBCC)",
-            "period": "Sep 2024 – Present"
+            "location": "Moncton, New Brunswick",
+            "period": "Sep 2024 – Present",
+            "description": "Focusing on full-stack development, API integration, and modern frameworks."
         },
         "additionalEducation": [
-            "Associate in Hospitality Management – Philippine School of Science & Technology",
-            "Computer Hardware Servicing NCII – DATS Actual Technical Training Center",
-            "Bachelor of Science in Information Technology – Liceo de Cagayan University"
+            {
+                "degree": "Associate in Hospitality Management",
+                "institution": "Philippine School of Science & Technology",
+                "period": "Nov 2014 - Mar 2016"
+            },
+            {
+                "degree": "Computer Hardware Servicing NCII",
+                "institution": "DATS Actual Technical Training Center",
+                "period": "Nov 2014 - Jan 2015"
+            },
+            {
+                "degree": "Bachelor of Science in Information Technology",
+                "institution": "Liceo de Cagayan University",
+                "period": "Jun 2010 - Oct 2014"
+            }
         ]
     }
 }

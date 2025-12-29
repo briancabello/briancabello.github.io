@@ -1,31 +1,82 @@
 <section id="experience" class="py-5">
   <div class="container">
-    <h2 class="mb-5">
+    
+    <h2 class="mb-5 text-start">
       <span class="border-bottom border-3 border-success pb-2">Work Experience</span>
     </h2>
 
-    <div class="row">
-      <div class="col-lg-8">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        
+        <div class="timeline-track">
 
-        {{#each experiences}}
-        <div class="card shadow-sm border-0 mb-4">
-          <div class="card-body p-4">
-            <h4 class="card-title mb-1">{{position}}</h4>
-            <div class="text-muted">{{company}}</div>
-            <div class="text-muted mt-2">{{period}}</div>
+          {{#each experiences}}
+          <div class="position-relative mb-5">
+            
+            <div class="position-absolute translate-middle-x timeline-marker">
+              {{#if image}}
+                <div class="bg-white border border-success border-2 rounded-circle shadow-sm overflow-hidden timeline-icon-box">
+                  <img src="{{image}}" alt="{{company}}" class="timeline-logo-img">
+                </div>
+              {{else}}
+                <div class="bg-body-secondary border border-success border-2 rounded-circle shadow-sm timeline-icon-box">
+                  <i class="fas fa-briefcase text-success fs-4"></i>
+                </div>
+              {{/if}}
+            </div>
 
-            {{#if responsibilities.length}}
-            <h6 class="text-secondary mt-3 mb-2">Responsibilities</h6>
-            <ul class="mb-0 ps-3">
-              {{#each responsibilities}}
-              <li class="mb-2">{{this}}</li>
-              {{/each}}
-            </ul>
-            {{/if}}
+            <div class="card shadow-sm border-0 bg-body-tertiary hover-lift transition-all">
+              <div class="card-body p-4">
+                
+                <div class="d-flex justify-content-between align-items-center mb-1">
+                  <h4 class="card-title fw-bold text-body-emphasis mb-0">{{position}}</h4>
+                  
+                  <div class="d-none d-md-block">
+                    <span class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25 px-3 py-2 rounded-pill">
+                       {{startDate}} - {{endDate}}
+                    </span>
+                  </div>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <div class="h6 text-success fw-medium mb-0">{{company}}</div>
+                  
+                  <small class="text-body-secondary text-nowrap">
+                    <i class="fas fa-map-marker-alt me-1 text-success"></i> {{location}}
+                  </small>
+                </div>
+
+                <div class="d-md-none mb-3">
+                   <span class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25 px-2 py-1 rounded-pill">
+                       {{startDate}} - {{endDate}}
+                   </span>
+                </div>
+
+                {{#if responsibilities.length}}
+                <hr class="text-secondary opacity-10 my-3">
+                <ul class="mb-0 ps-0 list-unstyled">
+                  {{#each responsibilities}}
+                  <li class="mb-2 d-flex align-items-start text-body-secondary">
+                    <span class="me-3 mt-1 text-success flex-shrink-0 lh-1 opacity-75">
+                        <i class="fas fa-check-circle"></i>
+                    </span>
+                    <span>{{this}}</span>
+                  </li>
+                  {{/each}}
+                </ul>
+                {{/if}}
+
+              </div>
+            </div> 
+            
           </div>
-        </div>
-        {{/each}}
+          {{/each}}
 
+          <div class="position-relative">
+             <div class="position-absolute translate-middle-x bg-success timeline-end-cap"></div>
+          </div>
+
+        </div> 
       </div>
     </div>
   </div>

@@ -1,18 +1,58 @@
-<section class="hero py-5 bg-body-tertiary">
-  <div class="container py-5">
+<section class="hero min-vh-100 d-flex align-items-center justify-content-center bg-body-tertiary pb-5" style="padding-bottom: 15vh !important;">
+  
+  <div class="container position-relative z-2">
     <div class="row justify-content-center">
-      <div class="col-lg-8 text-center">
+      <div class="col-lg-9 text-center">
 
-        <h1 class="display-5 fw-bold mb-3">{{about.name}}</h1>
-        <h2 class="h4 text-body-secondary mb-4">{{about.title}}</h2>
-        <p class="lead text-body-secondary mb-4">{{about.summary}}</p>
+        <div class="mb-4 d-inline-block animate-fade-down" style="animation-delay: 0.1s;">
+          <div class="d-inline-flex align-items-center gap-2 px-3 py-2 rounded-pill bg-white border shadow-sm">
+            <span class="position-relative d-flex h-10 w-10">
+              <span class="animate-ping position-absolute inline-flex h-100 w-100 rounded-circle bg-success opacity-75"></span>
+              <span class="position-relative inline-flex rounded-circle h-3 w-3 bg-success"></span>
+            </span>
+            <span class="small fw-bold text-uppercase text-success ls-1">Open to Opportunities</span>
+          </div>
+        </div>
 
-        <div class="d-flex justify-content-center gap-3 flex-wrap">
-          <a href="#contact" class="btn btn-success btn-lg">Get In Touch</a>
-          <a href="#projects" class="btn btn-outline-secondary btn-lg">View Projects</a>
+        <h1 class="display-3 fw-bold mb-3 lh-1 animate-fade-up" style="animation-delay: 0.2s;">
+          Hi, I'm 
+          <span class="text-success position-relative d-inline-block">
+            {{about.firstName}}
+            <svg class="position-absolute w-100 bottom-0 start-0 text-success opacity-25" height="12" viewBox="0 0 100 10" preserveAspectRatio="none" style="z-index:-1; transform: translateY(20%);">
+               <path d="M0 5 Q 50 10 100 5" stroke="currentColor" stroke-width="8" fill="none" />
+            </svg>
+          </span>
+        </h1>
+
+        <h2 class="h2 text-body-secondary fw-medium mb-4 animate-fade-up" style="animation-delay: 0.3s;">
+          {{about.title}}
+        </h2>
+
+        <div class="row justify-content-center mb-5 animate-fade-up" style="animation-delay: 0.4s;">
+          <div class="col-md-10 col-lg-8">
+            <p class="lead text-body-secondary opacity-90">
+              {{about.summary}}
+            </p>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-center gap-3 flex-wrap animate-fade-up" style="animation-delay: 0.5s;">
+          <a href="#projects" class="btn btn-success btn-lg px-5 py-3 shadow-lg hover-lift fw-semibold rounded-pill">
+            View My Work <i class="fas fa-arrow-right ms-2 small"></i>
+          </a>
+          <a href="#contact" class="btn btn-outline-secondary btn-lg px-5 py-3 shadow-sm hover-lift fw-medium rounded-pill bg-body">
+            Get In Touch
+          </a>
         </div>
 
       </div>
     </div>
   </div>
+
+  <div class="position-absolute bottom-0 start-50 translate-middle-x pb-4 d-none d-md-block animate-bounce">
+    <a href="#projects" class="text-secondary opacity-50 transition-icon" aria-label="Scroll Down">
+      <i class="fas fa-chevron-down fa-2x"></i>
+    </a>
+  </div>
+
 </section>

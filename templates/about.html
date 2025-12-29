@@ -2,44 +2,54 @@
   <div class="container">
 
     <div class="mb-5">
-      <div class="text-uppercase small text-body-secondary mb-1">
+      <div class="text-uppercase small text-success fw-bold mb-1">
         Background
       </div>
-
-      <h2 class="fw-bold">
+      <h2>
         <span class="border-bottom border-3 border-success pb-2">
           About Me
         </span>
       </h2>
     </div>
 
-    <div class="card border-0 shadow-sm bg-body">
-      <div class="card-body p-4 p-lg-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        
+        <div class="card border-0 shadow-sm bg-body-tertiary hover-lift transition-all">
+          <div class="card-body p-4 p-lg-5">
 
-        <div class="row align-items-center g-4">
+            <div class="row align-items-center g-4">
 
-          <div class="col-md-8">
-            {{#each about.bio}}
-              <p class="mb-3">{{this}}</p>
-            {{/each}}
-          </div>
-          
-          <div class="col-md-4 text-center">
+              <div class="col-md-8">
+                {{#each about.bio}}
+                  <p class="mb-3 text-body-secondary">{{this}}</p>
+                {{/each}}
+                
+                <div class="mt-4">
+                  <h5 class="fw-bold text-body-emphasis mb-0">{{about.fullName}}</h5>
+                  <small class="text-success fw-bold">{{about.title}}</small>
+                </div>
+              </div>
+              
+              <div class="col-md-4 text-center">
+                
+                <div class="mb-3 d-inline-block p-4 rounded-circle bg-success bg-opacity-10">
+                    <i class="fa-solid fa-laptop-code text-success fa-4x"></i>
+                </div>
 
-            <div class="mb-3">
-                <i class="fa-solid fa-layer-group text-primary" style="font-size: 4rem;"></i>
+                <h4 class="fw-bold mb-1 text-body-emphasis">
+                  {{about.title}}
+                </h4>
+
+                <p class="text-body-secondary mb-0 small">
+                  Specializing in modern web technologies
+                </p>
+
+              </div>
+
             </div>
 
-            <h4 class="fw-semibold mb-1">
-              Full-Stack Developer
-            </h4>
-
-            <p class="text-body-secondary mb-0">
-              Specializing in modern web technologies
-            </p>
-
           </div>
-
         </div>
 
       </div>

@@ -3,22 +3,44 @@
         {
             "position": "Cultivation IPM Operator",
             "company": "OrganiGram Inc.",
-            "responsibilities": []
+            "location": "Moncton, New Brunswick, Canada",
+            "startDate": "Dec 2022",
+            "endDate": "Sep 2025",
+            "image": "assets/images/OrganigramGlobal.png",
+            "responsibilities": [
+                "Assisted with transplanting, pruning, and care of plants.",
+                "Monitored plant health and supported scheduled inspections.",
+                "Prepares recipes for watering and/or application of pesticides.",
+                "Ensured data logging in Organigrow and followed SOPs."
+            ]
         },
         {
-            "position": "Assistant General Manager",
+            "position": "Assistant General Manager (Training Store)",
             "company": "Wendy's Company",
+            "location": "Denver, Colorado, USA",
+            "startDate": "Apr 2017",
+            "endDate": "Nov 2022",
+            "image": "assets/images/WendysLogo.svg",
             "responsibilities": [
-                "Hired, trained, and supervised a staff of 20+ in a high-volume environment",
-                "Developed a disciplined, result-driven work ethic focused on high standards"
+                "Hired, trained, and supervised staff of 20+ in a high-volume fast-food environment.",
+                "Oversaw daily operations, ensuring high standards for food quality and service.",
+                "Managed scheduling, cash handling, inventory, and opening/closing procedures.",
+                "Maintained health and safety standards, including ServSafe certification."
             ]
         },
         {
             "position": "Information Technology Associate",
             "company": "SM Mart, Inc.",
+            "location": "Cagayan de Oro City, Philippines",
+            "startDate": "Dec 2015",
+            "endDate": "Feb 2016",
+            "image": "assets/images/SMRetailLogo.png",
             "responsibilities": [
-                "Provided technical support for POS systems, servers, and network equipment",
-                "Assisted in testing and debugging new software applications"
+                "Provided technical support for point-of-sale (POS) systems and other IT hardware.",
+                "Installed, configured, and maintained POS servers, terminals, and network equipment.",
+                "Assisted in testing and debugging new software applications.",
+                "Performed data backups and ensured system security and access controls.",
+                "Managed electronic file transfers and followed IT operational procedures."
             ]
         }
     ]

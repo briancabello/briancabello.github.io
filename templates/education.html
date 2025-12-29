@@ -1,32 +1,69 @@
 <section id="education" class="py-5">
   <div class="container">
-    <h2 class="mb-5">
+    
+    <h2 class="mb-5 text-start">
       <span class="border-bottom border-3 border-success pb-2">Education</span>
     </h2>
 
-    <div class="row g-4">
-      <div class="col-lg-8">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        
+        <div class="timeline-track">
 
-        <div class="card shadow-sm border-0 mb-4">
-          <div class="card-body p-4">
-            <h4 class="card-title mb-1">{{education.currentEducation.program}}</h4>
-            <div class="text-muted">{{education.currentEducation.institution}}</div>
-            <div class="text-muted mt-2">{{education.currentEducation.period}}</div>
+          <div class="position-relative mb-5">
+            <div class="position-absolute translate-middle-x timeline-marker">
+              <div class="bg-success text-white border border-success border-2 rounded-circle shadow-sm timeline-icon-box">
+                <i class="fas fa-user-graduate fs-3"></i>
+              </div>
+            </div>
+
+            <div class="card shadow-sm border-0 bg-body-tertiary">
+              <div class="card-body p-4">
+                <div class="d-flex justify-content-between align-items-start flex-wrap mb-2">
+                  <div>
+                    <h3 class="card-title fw-bold text-body-emphasis mb-1">{{education.currentEducation.program}}</h3>
+                    <div class="h5 text-success mb-0">{{education.currentEducation.institution}}</div>
+                  </div>
+                  
+                  <div class="text-md-end mt-2 mt-md-0">
+                    <span class="badge bg-success text-white px-3 py-2 rounded-pill shadow-sm mb-2">
+                       Currently Enrolled
+                    </span>
+                    <div class="text-secondary fw-bold small text-uppercase">
+                      {{education.currentEducation.period}}
+                    </div>
+                  </div>
+                </div>
+                <p class="mt-3 mb-0 text-body-secondary border-top border-secondary border-opacity-10 pt-3">
+                  <i class="fas fa-code me-2 text-success"></i>{{education.currentEducation.description}}
+                </p>
+              </div>
+            </div> 
           </div>
-        </div>
 
-        <div class="card shadow-sm border-0">
-          <div class="card-body p-4">
-            <h5 class="card-title mb-3">Additional Education</h5>
+          <div class="ps-2"> 
+            <h6 class="text-uppercase text-body-secondary fw-bold opacity-50 mb-4 ls-1">Prior Qualification</h6>
 
-            <ul class="mb-0 ps-3">
-              {{#each education.additionalEducation}}
-              <li class="mb-2">{{this}}</li>
-              {{/each}}
-            </ul>
+            {{#each education.additionalEducation}}
+            <div class="position-relative mb-4">
+              <div class="position-absolute translate-middle timeline-dot-marker">
+                <div class="bg-body border border-success border-2 rounded-circle timeline-dot"></div>
+              </div>
+
+              <div class="row align-items-center">
+                <div class="col-md-8">
+                  <h5 class="fw-bold text-body-emphasis mb-0 fs-6">{{this.degree}}</h5>
+                  <div class="text-body-secondary small">{{this.institution}}</div>
+                </div>
+                <div class="col-md-4 text-md-end">
+                  <span class="text-secondary small fw-medium">{{this.period}}</span>
+                </div>
+              </div>
+            </div>
+            {{/each}}
           </div>
-        </div>
 
+        </div> 
       </div>
     </div>
   </div>
