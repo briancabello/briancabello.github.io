@@ -1,58 +1,76 @@
 <nav class="navbar navbar-expand-lg fixed-top navbar-blur border-bottom border-success border-opacity-10">
   <div class="container">
     
-    <a class="navbar-brand fw-bold font-monospace fs-4" href="https://briancabello.github.io/">
-      <span class="text-success me-1">&lt;/&gt;</span>{{about.fullName}}
-    </a>
+    {{#if isProjectPage}}
+      <a class="navbar-brand fw-bold font-monospace fs-4" href="index.html">
+        <i class="fas fa-arrow-left text-success me-2 small"></i> Back to Portfolio
+      </a>
 
-    <button class="navbar-toggler border-0 p-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto align-items-center gap-3 mt-3 mt-lg-0">
+      <div class="d-flex align-items-center gap-2 ms-auto">
         
-        <li class="nav-item">
-          <a class="nav-link fw-medium" href="#about">About</a>
-        </li>
-        <!-- 
-        <li class="nav-item">
-          <a class="nav-link fw-medium" href="#education">Education</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link fw-medium" href="#experience">Experience</a>
-        </li> 
-        -->
-        <li class="nav-item">
-          <a class="nav-link fw-medium" href="#projects">Projects</a>
-        </li>
-        
-        <li class="nav-item">
-          <a class="btn btn-sm btn-outline-success rounded-pill px-3 fw-medium" href="#contact">
-            Contact
-          </a>
-        </li>
+        <a class="btn btn-sm btn-success rounded-pill px-3 fw-medium shadow-sm hover-lift" 
+           href="assets/documents/Brian_Cabello_Resume.pdf" 
+           download="Brian_Cabello_Resume.pdf">
+           <i class="fas fa-download me-1 small"></i> Resume
+        </a>
 
-        <li class="nav-item ms-lg-2">
-          <a class="btn btn-sm btn-success rounded-pill px-3 fw-medium shadow-sm hover-lift" 
-            href="/assets/documents/Brian_Cabello_Resume.pdf" 
-            download="Brian_Cabello_Resume.pdf">
-            <i class="fas fa-download me-1 small"></i> Resume
-          </a>
-        </li>
+        <button id="themeToggle"
+                class="btn btn-sm btn-link nav-link rounded-circle d-flex align-items-center justify-content-center p-2"
+                type="button"
+                style="width: 38px; height: 38px;"
+                aria-label="Toggle theme">
+          <i id="themeIcon" class="fa-solid fa-moon"></i>
+        </button>
+      </div>
 
-        <li class="nav-item ms-lg-2">
-          <button id="themeToggle"
-                  class="btn btn-sm btn-link nav-link rounded-circle d-flex align-items-center justify-content-center p-2"
-                  type="button"
-                  style="width: 38px; height: 38px;"
-                  aria-label="Toggle theme">
-            <i id="themeIcon" class="fa-solid fa-moon"></i>
-          </button>
-        </li>
+    {{else}}
+      <a class="navbar-brand fw-bold font-monospace fs-4" href="https://briancabello.github.io/">
+        <span class="text-success me-1">&lt;/&gt;</span>{{about.fullName}}
+      </a>
 
-      </ul>
-    </div>
+      <button class="navbar-toggler border-0 p-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-center gap-3 mt-3 mt-lg-0">
+          
+          <li class="nav-item">
+            <a class="nav-link fw-medium" href="#about">About</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link fw-medium" href="#projects">Projects</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="btn btn-sm btn-outline-success rounded-pill px-3 fw-medium" href="#contact">
+              Contact
+            </a>
+          </li>
+
+          <li class="nav-item ms-lg-2">
+            <a class="btn btn-sm btn-success rounded-pill px-3 fw-medium shadow-sm hover-lift" 
+              href="assets/documents/Brian_Cabello_Resume.pdf" 
+              download="Brian_Cabello_Resume.pdf">
+              <i class="fas fa-download me-1 small"></i> Resume
+            </a>
+          </li>
+
+          <li class="nav-item ms-lg-2">
+            <button id="themeToggle"
+                    class="btn btn-sm btn-link nav-link rounded-circle d-flex align-items-center justify-content-center p-2"
+                    type="button"
+                    style="width: 38px; height: 38px;"
+                    aria-label="Toggle theme">
+              <i id="themeIcon" class="fa-solid fa-moon"></i>
+            </button>
+          </li>
+
+        </ul>
+      </div>
+    {{/if}}
+
   </div>
 </nav>

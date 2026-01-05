@@ -1,9 +1,11 @@
 {
     "projects": [
         {
+            "id": "campus-bites",
             "title": "Campus Bites",
             "status": "Academic Project",
             "description": "A multi-page web application designed for students to browse, create, manage, and publish recipes. This project focuses on complex data relationships and role-based security.",
+            "image": "assets/projects/campus-bites-preview.png",
             "techStack": [
                 "C#",
                 "ASP.NET Core MVC",
@@ -13,11 +15,31 @@
                 "ASP.NET Core Identity"
             ],
             "features": [
-                "<strong>Secure Authentication:</strong> Implemented ASP.NET Core Identity for role-based security (User vs. Administrator)",
-                "<strong>Approval Workflow:</strong> Built a logic flow where recipes move from \"Draft\" to \"Pending\" to \"Published\"",
-                "<strong>Data Integrity:</strong> Utilized Entity Framework Core to manage complex relationships between Users, Recipes, Ingredients, and Categories",
-                "<strong>Admin Moderation:</strong> System for reviewing uploaded images and ingredients before public visibility",
-                "<strong>Search Functionality:</strong> Filter recipes by category and ingredients"
+                {
+                    "icon": "fas fa-user-shield",
+                    "title": "Secure Authentication",
+                    "desc": "Implemented ASP.NET Core Identity for role-based security (User vs. Administrator)"
+                },
+                {
+                    "icon": "fas fa-tasks",
+                    "title": "Approval Workflow",
+                    "desc": "Built a logic flow where recipes move from \"Draft\" to \"Pending\" to \"Published\""
+                },
+                {
+                    "icon": "fas fa-database",
+                    "title": "Data Integrity",
+                    "desc": "Utilized Entity Framework Core to manage complex relationships between Users, Recipes, and Categories"
+                },
+                {
+                    "icon": "fas fa-gavel",
+                    "title": "Admin Moderation",
+                    "desc": "System for reviewing uploaded images and ingredients before public visibility"
+                },
+                {
+                    "icon": "fas fa-search",
+                    "title": "Search Functionality",
+                    "desc": "Filter recipes by category and ingredients"
+                }
             ],
             "demoUrl": null,
             "githubUrl": null

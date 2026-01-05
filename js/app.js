@@ -6,18 +6,24 @@ class PortfolioApp {
 
     async init() {
         try {
-            // 1. Load Templates and Data in Parallel
-            await Promise.all([
-                this.registerTemplates(),
-                this.loadData()
-            ]);
+            // 1. CHECK URL FOR PROJECT ID (SPA Logic)
+            const params = new URLSearchParams(window.location.search);
+            const projectId = params.get('project'); // e.g., ?project=campus-bites
 
-            // 2. Render the HTML
-            this.renderPortfolio();
+            if (projectId) {
+                // SCENARIO A: Render Project Detail View
+                await this.initProjectPage(projectId);
+            } else {
+                // SCENARIO B: Render Main Portfolio (Standard Flow)
+                await Promise.all([
+                    this.registerMainTemplates(),
+                    this.loadMainData()
+                ]);
 
-            // 3. Apply Config (Title, Analytics) & UI Logic (ScrollSpy)
-            this.applySiteConfig();
-            this.initUI();
+                this.renderPortfolio();
+                this.applySiteConfig();
+                this.initUI();
+            }
 
         } catch (error) {
             console.error('Error:', error);
@@ -25,25 +31,59 @@ class PortfolioApp {
         }
     }
 
-    async registerTemplates() {
+    // ============================================================
+    // SCENARIO A: PROJECT DETAIL VIEW
+    // ============================================================
+    async initProjectPage(projectId) {
+        // 1. Load ALL templates we need (Nav, Detail, Footer)
+        await Promise.all([
+            this.loadTemplates(['navigation', 'project-detail', 'footer']),
+            this.fetchJSON(`data/projects/${projectId}.json`).then(data => { this.data.project = data; }),
+            this.fetchJSON('data/site-data.json').then(data => { this.data.site = data; })
+        ]);
+
+        this.data.currentYear = new Date().getFullYear();
+
+        // 2. Prepare Context
+        // We add 'isProjectPage: true' so your Nav can use it if needed
+        const context = {
+            ...this.data.project,
+            site: this.data.site,
+            currentYear: this.data.currentYear,
+            isProjectPage: true
+        };
+
+        const app = document.getElementById('app');
+
+        if (this.templates['project-detail']) {
+            // 3. Render: Nav + Detail + Footer
+            app.innerHTML = `
+                ${this.templates.navigation(context)}
+                ${this.templates['project-detail'](context)}
+                ${this.templates.footer(context)}
+            `;
+
+            document.title = `${this.data.project.title} | Case Study`;
+            window.scrollTo(0, 0);
+        } else {
+            throw new Error('Project detail template failed to load.');
+        }
+    }
+
+    // ============================================================
+    // SCENARIO B: MAIN PORTFOLIO VIEW
+    // ============================================================
+    async registerMainTemplates() {
         const templateFiles = [
             'navigation', 'hero', 'about', 'skills',
             'projects', 'education', 'experience', 'contact', 'footer'
         ];
-
-        // Fetch all HTML files from the /templates folder
-        const loadPromises = templateFiles.map(async (name) => {
-            const response = await fetch(`templates/${name}.html`);
-            if (!response.ok) throw new Error(`Template '${name}' not found.`);
-            const templateHtml = await response.text();
-            this.templates[name] = Handlebars.compile(templateHtml);
-        });
-
-        await Promise.all(loadPromises);
+        // Re-use the helper to load these
+        await this.loadTemplates(templateFiles);
     }
 
-    async loadData() {
-        // Fetch all JSON files, including the new site-data.json
+    async loadMainData() {
+        // Fetch all JSON files for the main page
         const [about, skills, projects, education, experience, contact, siteData] = await Promise.all([
             this.fetchJSON('data/about.json'),
             this.fetchJSON('data/skills.json'),
@@ -67,12 +107,6 @@ class PortfolioApp {
         };
     }
 
-    async fetchJSON(url) {
-        const response = await fetch(url);
-        if (!response.ok) throw new Error(`Failed to load ${url}`);
-        return await response.json();
-    }
-
     renderPortfolio() {
         // This overwrites the "Loading..." spinner automatically
         const app = document.getElementById('app');
@@ -89,11 +123,32 @@ class PortfolioApp {
         `;
     }
 
+    // ============================================================
+    // SHARED UTILITIES
+    // ============================================================
+
+    // Helper to load any list of templates
+    async loadTemplates(names) {
+        const loadPromises = names.map(async (name) => {
+            const response = await fetch(`templates/${name}.html`);
+            if (!response.ok) throw new Error(`Template '${name}' not found.`);
+            const templateHtml = await response.text();
+            this.templates[name] = Handlebars.compile(templateHtml);
+        });
+        await Promise.all(loadPromises);
+    }
+
+    async fetchJSON(url) {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error(`Failed to load ${url}`);
+        return await response.json();
+    }
+
     applySiteConfig() {
         const { site } = this.data;
 
-        // Dynamic Page Title
-        if (site && site.siteName) {
+        // Dynamic Page Title (Only applied if not already set by Project Page)
+        if (site && site.siteName && !this.data.project) {
             document.title = site.siteName;
         }
 
@@ -159,7 +214,7 @@ class PortfolioApp {
                     <i class="fas fa-exclamation-triangle fa-3x mb-3"></i>
                     <h4>Error Loading Portfolio</h4>
                     <p>${error.message}</p>
-                    <button onclick="location.reload()" class="btn btn-outline-danger mt-3">Retry</button>
+                    <a href="index.html" class="btn btn-outline-danger mt-3">Return Home</a>
                 </div>
             </div>
         `;

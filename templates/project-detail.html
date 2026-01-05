@@ -1,0 +1,145 @@
+<header class="hero pt-5 pb-5 bg-body-tertiary border-bottom border-success border-opacity-10" style="margin-top: 60px;">
+    <div class="container pt-5">
+        <div class="row align-items-center">
+            
+            <div class="col-lg-7 mb-5 mb-lg-0 animate-fade-up">
+                <span class="badge bg-success-subtle text-success-emphasis border border-success border-opacity-25 px-3 py-2 mb-3 rounded-pill ls-1">{{status}}</span>
+                <h1 class="display-3 fw-bold mb-3">{{title}}</h1>
+                <p class="lead text-body-secondary mb-4">{{tagline}}</p>
+                
+                <div class="d-flex flex-wrap gap-3">
+                    {{#if demoUrl}}
+                    <a href="{{demoUrl}}" target="_blank" class="btn btn-success btn-lg px-4 py-2 shadow-sm fw-medium rounded-pill hover-lift">
+                        <i class="fas fa-desktop me-2"></i>Live Demo
+                    </a>
+                    {{/if}}
+                    {{#if githubUrl}}
+                    <a href="{{githubUrl}}" target="_blank" class="btn btn-outline-secondary btn-lg px-4 py-2 fw-medium rounded-pill bg-body hover-lift">
+                        <i class="fa-brands fa-github me-2"></i>Source Code
+                    </a>
+                    {{/if}}
+                </div>
+            </div>
+            
+            <div class="col-lg-5 animate-fade-up" style="animation-delay: 0.2s;">
+                <div class="card border-0 shadow-sm bg-body hover-lift">
+                    <div class="card-body p-4">
+                        <h6 class="text-uppercase text-success fw-bold small mb-4 ls-1 border-bottom border-success border-opacity-25 pb-2">Project Details</h6>
+                        <ul class="list-unstyled mb-0">
+                            {{#if role}}
+                            <li class="mb-3 d-flex justify-content-between border-bottom border-secondary border-opacity-10 pb-2">
+                                <span class="text-body-secondary small fw-bold text-uppercase opacity-75">Role</span>
+                                <span class="fw-medium text-end">{{role}}</span>
+                            </li>
+                            {{/if}}
+                            
+                            {{#if timeline}}
+                            <li class="mb-3 d-flex justify-content-between border-bottom border-secondary border-opacity-10 pb-2">
+                                <span class="text-body-secondary small fw-bold text-uppercase opacity-75">Timeline</span>
+                                <span class="fw-medium text-end">{{timeline}}</span>
+                            </li>
+                            {{/if}}
+                            
+                            {{#if team}}
+                            <li class="mb-3 d-flex justify-content-between border-bottom border-secondary border-opacity-10 pb-2">
+                                <span class="text-body-secondary small fw-bold text-uppercase opacity-75">Team</span>
+                                <span class="fw-medium text-end">{{team}}</span>
+                            </li>
+                            {{/if}}
+
+                            <li class="mt-3">
+                                <span class="d-block text-body-secondary small fw-bold text-uppercase opacity-75 mb-2">Tech Stack</span>
+                                <div class="d-flex flex-wrap gap-2">
+                                    {{#each techStack}}
+                                    <span class="badge bg-success-subtle text-success-emphasis border border-success border-opacity-25 px-2 py-1 rounded-pill">{{this}}</span>
+                                    {{/each}}
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main class="container py-5">
+    
+    {{#if heroImage}}
+    <div class="mb-5 animate-fade-up">
+        <div class="overflow-hidden rounded-3 shadow-sm border border-secondary border-opacity-10 bg-body-tertiary">
+            <img src="{{heroImage}}" alt="{{title}} Overview" class="w-100 object-fit-cover" style="max-height: 600px; width: 100%;">
+        </div>
+    </div>
+    {{/if}}
+
+    <div class="row g-5">
+        
+        <div class="col-lg-7 animate-fade-up" style="animation-delay: 0.3s;">
+            
+            {{#if challenge}}
+            <div class="mb-5 position-relative">
+                <div class="d-flex align-items-center mb-3">
+                    <span class="icon-bubble bg-danger bg-opacity-10 text-danger rounded-circle p-2 me-3 d-flex align-items-center justify-content-center flex-shrink-0 shadow-sm" style="width: 48px; height: 48px;">
+                        <i class="fas fa-mountain fa-lg"></i>
+                    </span>
+                    <h3 class="fw-bold mb-0 text-body-emphasis">The Challenge</h3>
+                </div>
+                <p class="text-body-secondary ps-lg-5 fs-5">{{challenge}}</p> </div>
+            {{/if}}
+
+            {{#if solution}}
+            <div class="mb-5 position-relative">
+                <div class="d-flex align-items-center mb-3">
+                    <span class="icon-bubble bg-success bg-opacity-10 text-success rounded-circle p-2 me-3 d-flex align-items-center justify-content-center flex-shrink-0 shadow-sm" style="width: 48px; height: 48px;">
+                        <i class="fas fa-lightbulb fa-lg"></i>
+                    </span>
+                    <h3 class="fw-bold mb-0 text-body-emphasis">The Solution</h3>
+                </div>
+                <p class="text-body-secondary ps-lg-5 fs-5">{{solution}}</p>
+            </div>
+            {{/if}}
+
+            {{#if features}}
+            <div class="mt-5 pt-4 border-top border-secondary border-opacity-10">
+                <h4 class="fw-bold mb-4">Key Features Implemented</h4>
+                <div class="row g-4">
+                    {{#each features}}
+                    <div class="col-md-6">
+                        <div class="card h-100 border-0 bg-body-tertiary shadow-sm hover-lift transition-all">
+                            <div class="card-body p-4 d-flex align-items-start"> <div class="text-success me-3 mt-1 fs-4 flex-shrink-0">
+                                    <i class="{{this.icon}}"></i>
+                                </div>
+                                <div>
+                                    <h6 class="fw-bold mb-2">{{this.title}}</h6>
+                                    <p class="small text-body-secondary mb-0 lh-sm">{{this.desc}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+            {{/if}}
+        </div>
+
+        <div class="col-lg-5 animate-fade-up" style="animation-delay: 0.4s;">
+            
+            <div class="sticky-top" style="top: 100px; z-index: 1;">
+                
+                {{#if images.showcase}}
+                <div class="position-relative d-inline-block w-100 text-center">
+                     
+                     <div class="position-absolute top-50 start-50 translate-middle bg-success opacity-10 rounded-circle" style="width: 300px; height: 300px; z-index: -1; filter: blur(50px);"></div>
+                    
+                     <div class="overflow-hidden rounded-3 shadow-lg border border-secondary border-opacity-10 bg-body-tertiary d-inline-block" style="max-width: 350px;">
+                         <img src="{{images.showcase}}" class="w-100 object-fit-cover" alt="{{title}} Showcase" style="min-height: 400px; max-height: 600px;">
+                     </div>
+
+                </div>
+                {{/if}}
+            
+            </div>
+        </div>
+    </div>
+</main>

@@ -136,6 +136,7 @@ h6 {
     letter-spacing: 1px;
 }
 
+/* Pulse Animation (Loading Screen) */
 @keyframes pulse {
     0% {
         opacity: 0.6;
@@ -208,6 +209,7 @@ h6 {
     color: var(--theme-color) !important;
 }
 
+/* Hero Badge & Dots */
 .h-10 {
     height: 10px;
 }
@@ -232,6 +234,7 @@ h6 {
     animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
 }
 
+/* Hero Animations */
 @keyframes fadeUp {
     from {
         opacity: 0;
@@ -282,7 +285,7 @@ h6 {
 }
 
 /* ---------------------------------------------------------
-   5) ROADMAP / TIMELINE SYSTEM
+   5) ROADMAP / TIMELINE SYSTEM (Desktop)
 --------------------------------------------------------- */
 .timeline-track {
     border-left: 2px solid var(--theme-color);
@@ -340,7 +343,7 @@ h6 {
 }
 
 /* ---------------------------------------------------------
-   6) CARD STYLING & DARK MODE FIXES
+   6) CARD STYLING & PROJECT IMAGES
 --------------------------------------------------------- */
 .card {
     border-radius: var(--radius);
@@ -359,6 +362,26 @@ html[data-bs-theme="dark"] .bg-success-subtle {
 html[data-bs-theme="dark"] .border-start,
 html[data-bs-theme="dark"] .border-left {
     opacity: 0.8;
+}
+
+/* -- PROJECT IMAGE ZOOM EFFECTS -- */
+.object-fit-cover {
+    object-fit: cover;
+}
+
+.hover-zoom {
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* On Hover, Scale Image */
+.card:hover .hover-zoom {
+    transform: scale(1.05);
+}
+
+/* Glassmorphism Badge (If overlaid on image) */
+.backdrop-blur {
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
 }
 
 /* ---------------------------------------------------------
@@ -431,7 +454,7 @@ footer a {
 
 /* ---------------------------------------------------------
    10) MOBILE RESPONSIVE FIXES
-   (Includes alignment fixes for dots and location text)
+   (Includes Stack Layout & Alignment Fixes)
 --------------------------------------------------------- */
 @media (max-width: 991.98px) {
     /* Hero Adjustments */
@@ -466,6 +489,7 @@ footer a {
         margin-bottom: 1.5rem;
     }
 
+    /* Hide Education Dots on Mobile */
     .timeline-dot-marker {
         display: none !important;
     }
@@ -475,7 +499,7 @@ footer a {
         padding-left: 0 !important;
     }
 
-    /* Work Experience */
+    /* Work Experience: Force Location to New Line */
     #experience .card-body .d-flex.justify-content-between {
         flex-direction: column;
         align-items: flex-start !important;

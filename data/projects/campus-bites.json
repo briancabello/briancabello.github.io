@@ -1,0 +1,57 @@
+{
+    "id": "campus-bites",
+    "title": "Campus Bites",
+    "tagline": "Easy Meals for Student Life",
+    "status": "Academic Project",
+    "heroImage": "assets/projects/localhost_7166_.png",
+    "description": "A student-run initiative platform where students can share and discover recipes tailored to student life, using minimal ingredients and basic kitchen appliances.",
+    "role": "Front-End Lead & UX Designer",
+    "timeline": "Fall 2025",
+    "team": "MVCode",
+
+    "techStack": [
+        "C#",
+        "ASP.NET Core MVC",
+        "SQL Server",
+        "Bootstrap 5",
+        "HTML5/CSS3"
+    ],
+
+    "demoUrl": "",
+    "githubUrl": "",
+
+    "challenge": "Students often struggle to prepare affordable, healthy meals due to limited kitchen equipment and tight budgets. Additionally, the platform required a complex moderation system to ensure quality: user-uploaded images and new ingredients needed to be segregated and hidden from the public until verified by an administrator",
+    "solution": "We developed 'Campus Bites' to bridge this gap. As the Front-End Lead, I designed the UI/UX to support a rigorous 'Approval Workflow'. I implemented visual indicators for 'Proposed Ingredients' and created a secure image handling system where unapproved content is automatically replaced with placeholders until an Admin grants approval.",
+
+    "features": [
+        {
+            "icon": "fas fa-tasks",
+            "title": "Approval Workflow",
+            "desc": "Recipes are automatically set to 'Draft' status and cannot be made public until all images and novel ingredients are approved by an admin"
+        },
+        {
+            "icon": "fas fa-shield-alt",
+            "title": "Image Security",
+            "desc": "Uploaded images are segregated from the main display folder and replaced with an 'Image Not Available' placeholder until they pass visual inspection."
+        },
+        {
+            "icon": "fas fa-carrot",
+            "title": "Ingredient Management",
+            "desc": "Users can propose new ingredients, which appear in the list with a visual indicator warning other users that the item is 'Not Yet Approved'."
+        },
+        {
+            "icon": "fas fa-search",
+            "title": "Smart Search",
+            "desc": "Advanced filtering allowing visitors to search recipes by keyword, date, and category simultaneously."
+        },
+        {
+            "icon": "fas fa-user-lock",
+            "title": "Role-Based Access",
+            "desc": "Authentication system distinguishing between Anonymous Visitors, Registered Users (who can create content), and Administrators."
+        }
+    ],
+
+    "images": {
+        "showcase": "assets/projects/campus-bites-showcase.png"
+    }
+}

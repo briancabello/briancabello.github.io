@@ -1,7 +1,36 @@
 {
-    "email": "brianc92622@gmail.com",
-    "phone": "(506) 229-1366",
-    "linkedin": "https://linkedin.com/in/briancabs",
-    "github": "https://github.com/briancabello",
-    "location": "Moncton, New Brunswick, Canada"
+    "cards": [
+        {
+            "id": "email",
+            "title": "Email",
+            "icon": "fa-solid fa-envelope",
+            "text": "brianc92622@gmail.com",
+            "link": "mailto:brianc92622@gmail.com",
+            "target": "_self"
+        },
+        {
+            "id": "phone",
+            "title": "Phone",
+            "icon": "fa-solid fa-phone",
+            "text": "(506) 229-1366",
+            "link": "tel:+15062291366",
+            "target": "_self"
+        },
+        {
+            "id": "linkedin",
+            "title": "LinkedIn",
+            "icon": "fa-brands fa-linkedin-in",
+            "text": "Connect on LinkedIn",
+            "link": "https://linkedin.com/in/briancabs",
+            "target": "_blank"
+        },
+        {
+            "id": "location",
+            "title": "Location",
+            "icon": "fa-solid fa-location-dot",
+            "text": "Moncton, New Brunswick",
+            "link": "https://www.google.com/maps/place/Moncton,+NB",
+            "target": "_blank"
+        }
+    ]
 }
