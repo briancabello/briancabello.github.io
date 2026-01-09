@@ -9,31 +9,13 @@
       </div>
 
       <div class="col-md-6 text-center text-md-end">
-        
-        <a href="{{contact.linkedin}}" target="_blank" class="mx-2 text-body-secondary link-success transition-icon" aria-label="LinkedIn">
-          <i class="fa-brands fa-linkedin-in fs-5"></i>
+        {{#each footer.socials}}
+        <a href="{{this.link}}" target="{{this.target}}" class="mx-2 text-body-secondary transition-icon" aria-label="{{this.name}}">
+          <i class="{{this.icon}} fs-5"></i>
         </a>
-
-        <a href="mailto:{{contact.email}}" class="mx-2 text-body-secondary link-success transition-icon" aria-label="Email">
-          <i class="fa-solid fa-envelope fs-5"></i>
-        </a>
-
-        <a href="{{contact.github}}" target="_blank" class="mx-2 text-body-secondary link-success transition-icon" aria-label="GitHub">
-          <i class="fa-brands fa-github fs-5"></i>
-        </a>
-
+        {{/each}}
       </div>
 
     </div>
   </div>
 </footer>
-
-<style>
-  .transition-icon {
-    transition: color 0.3s ease, transform 0.2s ease;
-  }
-  .transition-icon:hover {
-    color: var(--bs-success) !important; /* Forces the green color on hover */
-    transform: translateY(-3px); /* Subtle pop up effect */
-  }
-</style>

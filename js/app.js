@@ -39,7 +39,9 @@ class PortfolioApp {
         await Promise.all([
             this.loadTemplates(['navigation', 'project-detail', 'footer']),
             this.fetchJSON(`data/projects/${projectId}.json`).then(data => { this.data.project = data; }),
-            this.fetchJSON('data/site-data.json').then(data => { this.data.site = data; })
+            this.fetchJSON('data/site-data.json').then(data => { this.data.site = data; }),
+            this.fetchJSON('data/footer.json').then(data => { this.data.footer = data; }),
+            this.fetchJSON('data/about.json').then(data => { this.data.about = data; })
         ]);
 
         this.data.currentYear = new Date().getFullYear();
@@ -49,6 +51,8 @@ class PortfolioApp {
         const context = {
             ...this.data.project,
             site: this.data.site,
+            about: this.data.about,
+            footer: this.data.footer,
             currentYear: this.data.currentYear,
             isProjectPage: true
         };
@@ -84,14 +88,15 @@ class PortfolioApp {
 
     async loadMainData() {
         // Fetch all JSON files for the main page
-        const [about, skills, projects, education, experience, contact, siteData] = await Promise.all([
+        const [about, skills, projects, education, experience, contact, siteData, footer] = await Promise.all([
             this.fetchJSON('data/about.json'),
             this.fetchJSON('data/skills.json'),
             this.fetchJSON('data/projects.json'),
             this.fetchJSON('data/education.json'),
             this.fetchJSON('data/experience.json'),
             this.fetchJSON('data/contact.json'),
-            this.fetchJSON('data/site-data.json')
+            this.fetchJSON('data/site-data.json'),
+            this.fetchJSON('data/footer.json')
         ]);
 
         // Combine into one data object
@@ -102,7 +107,8 @@ class PortfolioApp {
             education: education.education,
             experiences: experience.experiences,
             contact,
-            site: siteData, // Accessible in HTML as {{site.siteName}}
+            site: siteData,
+            footer,
             currentYear: new Date().getFullYear()
         };
     }

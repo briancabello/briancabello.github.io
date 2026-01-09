@@ -1,0 +1,22 @@
+{
+    "socials": [
+        {
+            "name": "LinkedIn",
+            "link": "https://linkedin.com/in/briancabs",
+            "icon": "fa-brands fa-linkedin-in",
+            "target": "_blank"
+        },
+        {
+            "name": "Email",
+            "link": "mailto:brianc92622@gmail.com",
+            "icon": "fa-solid fa-envelope",
+            "target": "_self"
+        },
+        {
+            "name": "GitHub",
+            "link": "https://github.com/briancabello",
+            "icon": "fa-brands fa-github",
+            "target": "_blank"
+        }
+    ]
+}
