@@ -31,6 +31,14 @@
             "text": "Moncton, New Brunswick",
             "link": "https://www.google.com/maps/place/Moncton,+NB",
             "target": "_blank"
+        },
+        {
+            "id": "github",
+            "title": "GitHub",
+            "icon": "fa-brands fa-github",
+            "text": "briancabello",
+            "link": "https://github.com/briancabello",
+            "target": "_blank"
         }
     ]
 }

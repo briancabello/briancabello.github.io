@@ -199,6 +199,14 @@ class PortfolioApp {
                 const target = document.querySelector(targetId);
                 if (target) {
                     e.preventDefault();
+
+                    // Close mobile nav if open
+                    const navCollapse = document.getElementById('navbarNav');
+                    if (navCollapse && navCollapse.classList.contains('show')) {
+                        const bsCollapse = bootstrap.Collapse.getInstance(navCollapse);
+                        if (bsCollapse) bsCollapse.hide();
+                    }
+
                     // Offset for the fixed Navbar (80px)
                     const headerOffset = 80;
                     const elementPosition = target.getBoundingClientRect().top;
