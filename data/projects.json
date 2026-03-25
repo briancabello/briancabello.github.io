@@ -4,7 +4,7 @@
             "id": "campus-bites",
             "title": "Campus Bites",
             "status": "Academic Project",
-            "description": "A multi-page web application designed for students to browse, create, manage, and publish recipes. This project focuses on complex data relationships and role-based security.",
+            "description": "A student recipe-sharing platform with role-based access control, content moderation workflow, and image security. Built with ASP.NET Core MVC and a team of developers following Agile practices.",
             "image": "assets/projects/campus-bites-preview.png",
             "techStack": [
                 "C#",
@@ -17,28 +17,23 @@
             "features": [
                 {
                     "icon": "fas fa-user-shield",
-                    "title": "Secure Authentication",
-                    "desc": "Implemented ASP.NET Core Identity for role-based security (User vs. Administrator)"
+                    "title": "Role-Based Security",
+                    "desc": "Three-tier access system: Anonymous visitors, Registered Users, and Administrators"
                 },
                 {
                     "icon": "fas fa-tasks",
                     "title": "Approval Workflow",
-                    "desc": "Built a logic flow where recipes move from \"Draft\" to \"Pending\" to \"Published\""
+                    "desc": "Recipes flow through Draft → Pending → Published with admin-gated image and ingredient approval"
                 },
                 {
                     "icon": "fas fa-database",
-                    "title": "Data Integrity",
-                    "desc": "Utilized Entity Framework Core to manage complex relationships between Users, Recipes, and Categories"
+                    "title": "Complex Data Model",
+                    "desc": "Entity Framework Core managing relationships across Users, Recipes, Ingredients, and Categories"
                 },
                 {
-                    "icon": "fas fa-gavel",
-                    "title": "Admin Moderation",
-                    "desc": "System for reviewing uploaded images and ingredients before public visibility"
-                },
-                {
-                    "icon": "fas fa-search",
-                    "title": "Search Functionality",
-                    "desc": "Filter recipes by category and ingredients"
+                    "icon": "fas fa-shield-alt",
+                    "title": "Image Security",
+                    "desc": "Uploaded images segregated and replaced with placeholders until admin verification"
                 }
             ],
             "demoUrl": null,

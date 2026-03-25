@@ -11,13 +11,44 @@
             ]
         },
         {
-            "title": "Frontend & UI",
+            "title": "Architecture & Patterns",
             "badges": [
-                { "name": "Angular", "icon": "angularjs" },
-                { "name": "HTML5", "icon": "html5" },
-                { "name": "CSS3", "icon": "css3" },
-                { "name": "Bootstrap", "icon": "bootstrap" },
-                { "name": "Tailwind CSS", "icon": "tailwindcss" }
+                { "name": "Clean Architecture", "icon": "archlinux" },
+                { "name": "MVC Pattern", "icon": "dotnetcore" },
+                { "name": "MVVM Pattern", "icon": "code" },
+                { "name": "RESTful APIs", "icon": "fastapi" },
+                { "name": "SOLID Principles", "icon": "code" }
+            ]
+        },
+        {
+            "title": "Microsoft / .NET",
+            "badges": [
+                { "name": "ASP.NET Core", "icon": "dotnetcore" },
+                {
+                    "name": "Entity Framework Core",
+                    "icon": "entityframeworkcore"
+                },
+                { "name": "Razor Views", "icon": "dotnetcore" }
+            ]
+        },
+        {
+            "title": "Java Ecosystem",
+            "badges": [
+                { "name": "Java", "icon": "java" },
+                { "name": "Spring Boot", "icon": "spring" },
+                { "name": "JPA (Hibernate)", "icon": "hibernate" },
+                { "name": "Thymeleaf", "icon": "html5" },
+                { "name": "Servlets & JSP", "icon": "java" }
+            ]
+        },
+        {
+            "title": "Mobile Development",
+            "badges": [
+                { "name": "Swift", "icon": "swift" },
+                { "name": "SwiftUI", "icon": "swift" },
+                { "name": "Kotlin", "icon": "kotlin" },
+                { "name": "Android Studio", "icon": "androidstudio" },
+                { "name": "Apple / iOS", "icon": "apple" }
             ]
         },
         {
@@ -25,27 +56,18 @@
             "badges": [
                 { "name": "Node.js", "icon": "nodejs" },
                 { "name": "Express.js", "icon": "express" },
-                { "name": "Handlebars (HBS)", "icon": "handlebars" }
+                { "name": "Handlebars (HBS)", "icon": "handlebars" },
+                { "name": "EJS", "icon": "javascript" }
             ]
         },
         {
-            "title": "Microsoft Stack",
+            "title": "Frontend & UI",
             "badges": [
-                { "name": "ASP.NET Core", "icon": "dotnetcore" },
-                {
-                    "name": "Entity Framework Core",
-                    "icon": "entityframeworkcore"
-                },
-                { "name": "Razor", "icon": "entityframeworkcore" }
-            ]
-        },
-        {
-            "title": "Enterprise Java",
-            "badges": [
-                { "name": "Servlets", "icon": "java" },
-                { "name": "JSP", "icon": "java" },
-                { "name": "JSTL", "icon": "java" },
-                { "name": "JPA (Hibernate)", "icon": "hibernate" }
+                { "name": "Angular", "icon": "angularjs" },
+                { "name": "HTML5", "icon": "html5" },
+                { "name": "CSS3", "icon": "css3" },
+                { "name": "Bootstrap", "icon": "bootstrap" },
+                { "name": "Tailwind CSS", "icon": "tailwindcss" }
             ]
         },
         {
@@ -57,18 +79,19 @@
             ]
         },
         {
-            "title": "Tools & IDEs",
+            "title": "DevOps & Tools",
+            "badges": [
+                { "name": "Git", "icon": "git" },
+                { "name": "GitHub", "icon": "github" },
+                { "name": "Jira", "icon": "jira" }
+            ]
+        },
+        {
+            "title": "IDEs & Editors",
             "badges": [
                 { "name": "Visual Studio", "icon": "visualstudio" },
                 { "name": "VS Code", "icon": "vscode" },
                 { "name": "IntelliJ IDEA", "icon": "intellij" }
-            ]
-        },
-        {
-            "title": "Version Control",
-            "badges": [
-                { "name": "Git", "icon": "git" },
-                { "name": "GitHub", "icon": "github" }
             ]
         },
         {
@@ -80,7 +103,9 @@
             "badges": [
                 { "name": "Python", "icon": "python" },
                 { "name": "Vue.js", "icon": "vuejs" },
-                { "name": "Laravel", "icon": "laravel" }
+                { "name": "Laravel", "icon": "laravel" },
+                { "name": "Docker", "icon": "docker" },
+                { "name": "React", "icon": "react" }
             ]
         }
     ]

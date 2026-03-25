@@ -2,15 +2,16 @@
     "firstName": "Brian",
     "lastName": "Cabello",
     "fullName": "Brian Cabello",
-    "title": "Full-Stack Developer",
+    "title": "Software Developer",
     "email": "brianc92622@gmail.com",
 
     "//_comment": "HERO: Focuses on potential, growth, and enthusiasm.",
-    "summary": "Aspiring Full-Stack Developer with a solid foundation in the Microsoft Stack. I am passionate about learning best practices in C# and .NET, eager to tackle new challenges, and committed to growing as a professional developer within a collaborative team.",
+    "summary": "Versatile Software Developer with a growing skill set across web and mobile platforms. As an IT Software Development student, I am building a solid foundation in backend technologies like Java, Spring Boot, and C# .NET, while actively learning to build dynamic interfaces with React. I am also exploring mobile app development using Swift and Kotlin. I am eager to tackle new challenges, learn best practices, and grow as a professional within a collaborative team.",
 
     "//_comment": "ABOUT: Focuses on the academic journey and transferable soft skills.",
     "bio": [
-        "I am currently completing my diploma in IT Software Development at NBCC, where I have dedicated myself to mastering the fundamentals of web development. My academic projects have given me hands-on experience with the full software lifecycle, from database design to front-end implementation.",
-        "Before transitioning into tech, I gained valuable experience in team leadership and operations. These roles taught me the importance of clear communication, adaptability, and reliability qualities. I am excited to bring to a development team as I continue to learn and evolve in this field."
+        "I am currently completing my diploma in IT Software Development at NBCC, where I have dedicated myself to mastering the fundamentals of software development across both web and mobile platforms. My academic projects have given me hands-on experience with the full software lifecycle, from architecting robust backends and databases to building dynamic web interfaces and native mobile applications.",
+        "Before transitioning into tech, I gained valuable experience in team leadership and operations. These roles taught me the importance of clear communication, adaptability, and reliability. These are qualities I am excited to bring to a development team as I continue to learn and evolve in this field.",
+        "I am currently seeking practicum and entry-level opportunities, and I am open to local, remote, and relocation options. I am the developer who reads the documentation before asking, refactors before moving on, and treats every code review as a learning opportunity."
     ]
 }
