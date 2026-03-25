@@ -1,0 +1,76 @@
+{
+    "id": "flavor-da-casa",
+    "title": "Flavor da Casa",
+    "tagline": "Restaurant Reservation Management System",
+    "status": "In Development",
+    "heroImage": null,
+    "description": "A full-featured restaurant management platform handling event scheduling, seating configuration, dining table management, menu creation, and guest reservation workflows with email confirmations, built from the ground up using Spring Boot with strict Clean Architecture principles.",
+    "role": "Full-Stack Developer",
+    "timeline": "Spring 2026",
+    "team": "Brian Cabello & Matheus Camilo Ferraro",
+
+    "techStack": [
+        "Java",
+        "Spring Boot",
+        "Thymeleaf",
+        "Clean Architecture",
+        "MySQL",
+        "REST API",
+        "Bootstrap 5",
+        "Jira"
+    ],
+
+    "demoUrl": "",
+    "githubUrl": "",
+
+    "challenge": "Building a restaurant management system that handles the full complexity of event scheduling, dynamic seating arrangements, dining table configuration with capacity tracking, menu management, and a multi-step reservation workflow, all while maintaining strict Clean Architecture boundaries across multiple developers. The project also needed to expose a REST API layer for third-party integrations and follow Agile practices through Jira Sprints with a structured Git branching strategy.",
+
+    "solution": "We designed the system using Clean Architecture with four distinct layers: Domain (DTOs and business entities), Application (service interfaces, validation logic, and business rules), Infrastructure (JPA repositories and MySQL persistence with entity mapping), and Presentation (Spring MVC controllers and Thymeleaf views). Each layer enforces strict dependency rules, inner layers never depend on outer layers. The reservation workflow validates event existence, seating availability, and guest data before generating UUID based confirmations. REST API controllers expose events, menus, and reservations as JSON endpoints. We managed the entire project through Jira with user stories, subtasks, and Sprint cycles.",
+
+    "features": [
+        {
+            "icon": "fas fa-layer-group",
+            "title": "Clean Architecture",
+            "desc": "Four-layer architecture (Domain → Application → Infrastructure → Presentation) with strict dependency inversion and separation of concerns."
+        },
+        {
+            "icon": "fas fa-calendar-alt",
+            "title": "Event Management",
+            "desc": "Full CRUD for restaurant events with server-side validation, date conflict detection, duration defaults, and capacity constraints."
+        },
+        {
+            "icon": "fas fa-chair",
+            "title": "Seating & Table System",
+            "desc": "Dynamic seating management with table assignments (many-to-many), capacity tracking, time-slotted availability, and cascade delete handling."
+        },
+        {
+            "icon": "fas fa-utensils",
+            "title": "Menu Management",
+            "desc": "Full CRUD for menus and menu items with descriptions, creation date tracking, and organized category display on the reservation form."
+        },
+        {
+            "icon": "fas fa-concierge-bell",
+            "title": "Reservation Workflow",
+            "desc": "Multi-step guest reservations: select event → choose seating → enter guest details → server-side validation → UUID-based email confirmation."
+        },
+        {
+            "icon": "fas fa-plug",
+            "title": "REST API Layer",
+            "desc": "EventApiController, MenuApiController, and ReservationApiController exposing data as JSON endpoints for external consumption."
+        },
+        {
+            "icon": "fas fa-check-double",
+            "title": "Validation Framework",
+            "desc": "Custom ValidationService pattern with Result/ValidatedResult wrapper types, field-level error binding, and BindingResult integration."
+        },
+        {
+            "icon": "fas fa-project-diagram",
+            "title": "Agile with Jira",
+            "desc": "Sprint-managed development with user stories, subtasks, and a Git branching strategy (main → sprint → feature branches) with Pull Request reviews."
+        }
+    ],
+
+    "images": {
+        "showcase": null
+    }
+}

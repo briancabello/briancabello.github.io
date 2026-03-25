@@ -1,0 +1,65 @@
+{
+    "id": "unicycle-marketplace",
+    "title": "UniCycle Marketplace",
+    "tagline": "Buy. Sell. Trade. - Campus Marketplace",
+    "status": "Solo Project",
+    "heroImage": null,
+    "description": "A campus-verified online marketplace designed for university students to safely buy, sell, and trade textbooks, electronics, dorm essentials, and more within a trusted community environment.",
+    "role": "Solo Full-Stack Developer",
+    "timeline": "Spring 2026",
+    "team": "Solo Project",
+
+    "techStack": [
+        "Node.js",
+        "Express 5",
+        "MongoDB",
+        "Mongoose",
+        "EJS",
+        "Bootstrap",
+        "Multer"
+    ],
+
+    "demoUrl": "",
+    "githubUrl": "",
+
+    "challenge": "Creating a full-featured marketplace platform from scratch that handles user authentication, product listings with image uploads, and a campus verified trust system, all while following Rational Unified Process (RUP) methodology for structured iterative development with proper documentation and phase deliverables.",
+
+    "solution": "I built the platform using Node.js with Express 5 and MongoDB/Mongoose for flexible document storage of user profiles and product listings. Authentication uses bcrypt for password hashing with express-session for state management. Image uploads are handled through Multer middleware with server-side validation. The EJS templating engine with express-ejs-layouts provides a clean MVC like separation. I followed RUP methodology throughout, producing inception, elaboration, and construction phase artifacts.",
+
+    "features": [
+        {
+            "icon": "fas fa-shield-alt",
+            "title": "Secure Authentication",
+            "desc": "bcrypt password hashing, express-session management, and connect-flash messaging for login/registration feedback."
+        },
+        {
+            "icon": "fas fa-store",
+            "title": "Product Listings",
+            "desc": "Full CRUD for marketplace listings with category icons, pricing, condition status, and multi-image upload support."
+        },
+        {
+            "icon": "fas fa-camera",
+            "title": "Image Upload System",
+            "desc": "Multer powered file upload middleware with server-side validation and storage management."
+        },
+        {
+            "icon": "fas fa-university",
+            "title": "Campus Verification",
+            "desc": "Registration system designed for university affiliated students with profile management and community trust features."
+        },
+        {
+            "icon": "fas fa-sitemap",
+            "title": "RUP Methodology",
+            "desc": "Rational Unified Process with inception, elaboration, construction, and transition phase documentation."
+        },
+        {
+            "icon": "fas fa-moon",
+            "title": "Dark/Light Theme",
+            "desc": "System-aware theme toggle with CSS custom properties for seamless light and dark mode switching."
+        }
+    ],
+
+    "images": {
+        "showcase": null
+    }
+}

@@ -1,0 +1,64 @@
+{
+    "id": "trivia-quest",
+    "title": "TriviaQuest",
+    "tagline": "Real-Time Multiplayer Quiz Game",
+    "status": "Completed",
+    "heroImage": null,
+    "description": "A multiplayer trivia quiz game built with WebSockets for a Networking for Programmers course. Multiple players connect simultaneously, compete through configurable quiz rounds, and see live leaderboard updates in real time.",
+    "role": "Full-Stack Developer",
+    "timeline": "Spring 2026",
+    "team": "Brian Cabello & Matheus Camilo Ferraro",
+
+    "techStack": [
+        "Node.js",
+        "Express",
+        "Socket.io",
+        "WebSockets",
+        "HTML/CSS/JS",
+        "Bootstrap 5"
+    ],
+
+    "demoUrl": "",
+    "githubUrl": "",
+
+    "challenge": "Building a real-time multiplayer game that synchronizes question delivery, answer submission, scoring, and leaderboard updates across all connected players simultaneously without any perceptible lag. The networking layer needed to handle player joins, disconnections, round transitions, and game-over states cleanly.",
+
+    "solution": "We used Socket.io for bidirectional WebSocket communication between the Express server and all connected browser clients. The server manages game state centrally fetching trivia questions from an external API, broadcasting questions to all players, collecting answers within a countdown timer, calculating scores, and pushing live leaderboard updates. We implemented XSS sanitization on all user input and built a settings system allowing the host to configure category, difficulty, and round count before starting.",
+
+    "features": [
+        {
+            "icon": "fas fa-bolt",
+            "title": "Real-Time WebSockets",
+            "desc": "Socket.io bidirectional communication for instant question delivery, answer collection, and live score broadcasting."
+        },
+        {
+            "icon": "fas fa-trophy",
+            "title": "Live Leaderboard",
+            "desc": "Dynamic player ranking with gold/silver/bronze medal system, sorted scores, and visual answer status indicators."
+        },
+        {
+            "icon": "fas fa-sliders-h",
+            "title": "Game Configuration",
+            "desc": "Players choose trivia category, difficulty level (Easy/Medium/Hard), and number of rounds before starting."
+        },
+        {
+            "icon": "fas fa-clock",
+            "title": "Timed Rounds",
+            "desc": "Countdown timer per question with automatic round progression when time expires or all players answer."
+        },
+        {
+            "icon": "fas fa-shield-alt",
+            "title": "Input Sanitization",
+            "desc": "XSS protection on all user submitted data using the xss library to prevent injection attacks."
+        },
+        {
+            "icon": "fas fa-redo",
+            "title": "Auto-Restart",
+            "desc": "Game-over screen with final scores, winner announcement, and automatic redirect to lobby for replay."
+        }
+    ],
+
+    "images": {
+        "showcase": null
+    }
+}
