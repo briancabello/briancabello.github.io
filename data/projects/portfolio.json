@@ -1,0 +1,45 @@
+{
+    "id": "portfolio",
+    "title": "Developer Portfolio",
+    "tagline": "Data-Driven Single-Page Application",
+    "status": "Live",
+    "heroImage": null,
+    "description": "This website — a data-driven SPA built from scratch with vanilla JavaScript, Handlebars templating, and JSON data files. No build tools, no frameworks — just clean architecture for a static GitHub Pages site.",
+    "role": "Solo Full-Stack Developer",
+    "timeline": "2025 – Present",
+    "team": "Solo Project",
+    "techStack": [
+        "JavaScript",
+        "Handlebars.js",
+        "Bootstrap 5",
+        "CSS3",
+        "GitHub Pages"
+    ],
+    "demoUrl": "https://briancabello.github.io",
+    "githubUrl": "https://github.com/briancabello/briancabello.github.io",
+    "challenge": "Building a portfolio that goes beyond a static HTML page — one that demonstrates actual software architecture skills while staying within the constraints of GitHub Pages static hosting. The site needed to be data-driven (content changes shouldn't require touching templates), support deep-linking to individual project case studies, and handle dark/light theming that respects the user's system preferences.",
+    "solution": "I designed a data-driven SPA architecture where all content lives in JSON files, templates are compiled at runtime using Handlebars.js, and URL-param based routing enables project detail pages without a backend. The theme toggle uses localStorage for persistence and a MutationObserver to sync UI after async template rendering. The entire site is a demonstration of separation of concerns: data, templates, styling, and logic are each in their own layer.",
+    "features": [
+        {
+            "icon": "fas fa-code",
+            "title": "SPA Architecture",
+            "desc": "URL-param based routing with dynamic Handlebars template compilation and JSON data separation — no build step required."
+        },
+        {
+            "icon": "fas fa-moon",
+            "title": "System-Aware Theming",
+            "desc": "Dark/light toggle that checks localStorage first, falls back to OS preference, and uses MutationObserver for render-safe UI sync."
+        },
+        {
+            "icon": "fas fa-database",
+            "title": "Data-Driven Content",
+            "desc": "All portfolio content stored in JSON files — adding a project means editing a JSON file, not rewriting HTML."
+        },
+        {
+            "icon": "fas fa-mobile-alt",
+            "title": "Fully Responsive",
+            "desc": "Mobile-first layout with Bootstrap 5, collapsible navigation, and adaptive timeline components."
+        }
+    ],
+    "images": { "showcase": null }
+}

@@ -2,32 +2,29 @@
     "id": "campus-bites",
     "title": "Campus Bites",
     "tagline": "Easy Meals for Student Life",
-    "status": "Academic Project",
+    "status": "Completed",
     "heroImage": "assets/projects/campus-bites-hero.png",
     "description": "A student-run initiative platform where students can share and discover recipes tailored to student life, using minimal ingredients and basic kitchen appliances.",
     "role": "Front-End Lead & UX Designer",
     "timeline": "Fall 2025",
     "team": "MVCode",
-
     "techStack": [
         "C#",
         "ASP.NET Core MVC",
+        "Entity Framework Core",
         "SQL Server",
         "Bootstrap 5",
-        "HTML5/CSS3"
+        "ASP.NET Core Identity"
     ],
-
     "demoUrl": "",
     "githubUrl": "",
-
-    "challenge": "Students often struggle to prepare affordable, healthy meals due to limited kitchen equipment and tight budgets. Additionally, the platform required a complex moderation system to ensure quality: user-uploaded images and new ingredients needed to be segregated and hidden from the public until verified by an administrator",
+    "challenge": "Students often struggle to prepare affordable, healthy meals due to limited kitchen equipment and tight budgets. Additionally, the platform required a complex moderation system to ensure quality: user-uploaded images and new ingredients needed to be segregated and hidden from the public until verified by an administrator.",
     "solution": "We developed 'Campus Bites' to bridge this gap. As the Front-End Lead, I designed the UI/UX to support a rigorous 'Approval Workflow'. I implemented visual indicators for 'Proposed Ingredients' and created a secure image handling system where unapproved content is automatically replaced with placeholders until an Admin grants approval.",
-
     "features": [
         {
             "icon": "fas fa-tasks",
             "title": "Approval Workflow",
-            "desc": "Recipes are automatically set to 'Draft' status and cannot be made public until all images and novel ingredients are approved by an admin"
+            "desc": "Recipes are automatically set to 'Draft' status and cannot be made public until all images and novel ingredients are approved by an admin."
         },
         {
             "icon": "fas fa-shield-alt",
@@ -50,8 +47,5 @@
             "desc": "Authentication system distinguishing between Anonymous Visitors, Registered Users (who can create content), and Administrators."
         }
     ],
-
-    "images": {
-        "showcase": "assets/projects/campus-bites-showcase.png"
-    }
+    "images": { "showcase": "assets/projects/campus-bites-showcase.png" }
 }

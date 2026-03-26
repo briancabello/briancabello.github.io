@@ -4,170 +4,36 @@
             "id": "flavor-da-casa",
             "title": "Flavor da Casa",
             "status": "In Development",
-            "description": "A full-stack restaurant reservation management system built with Spring Boot and Clean Architecture. Features event scheduling, seating management, dining tables, menu configuration, guest reservations with email confirmations, and a REST API layer, all managed through Jira Sprints.",
-            "image": null,
-            "techStack": [
-                "Java",
-                "Spring Boot",
-                "Thymeleaf",
-                "Clean Architecture",
-                "MySQL",
-                "REST API",
-                "Jira"
-            ],
-            "features": [
-                {
-                    "icon": "fas fa-layer-group",
-                    "title": "Clean Architecture",
-                    "desc": "Four-layer separation: Domain, Application, Infrastructure, and Presentation with strict dependency rules"
-                },
-                {
-                    "icon": "fas fa-concierge-bell",
-                    "title": "Reservation Workflow",
-                    "desc": "Multi-step guest reservations with event/seating selection, validation, and UUID-based confirmation"
-                },
-                {
-                    "icon": "fas fa-plug",
-                    "title": "REST API",
-                    "desc": "API controllers exposing events, menus, and reservations as JSON endpoints for external consumption"
-                },
-                {
-                    "icon": "fas fa-tasks",
-                    "title": "Jira-Managed Sprints",
-                    "desc": "Planned and tracked with user stories, subtasks, and a structured Git branching strategy"
-                }
-            ],
-            "demoUrl": null,
-            "githubUrl": null
+            "description": "A full-stack management system built with Spring Boot and Clean Architecture. It handles event scheduling, seating, and guest reservations through a custom REST API.",
+            "image": null
         },
         {
             "id": "unicycle-marketplace",
             "title": "UniCycle Marketplace",
             "status": "Solo Project",
-            "description": "A campus-verified online marketplace where university students can buy, sell, and trade items within a trusted community. Built solo using the Rational Unified Process (RUP) methodology with full authentication and image uploads.",
-            "image": null,
-            "techStack": [
-                "Node.js",
-                "Express 5",
-                "MongoDB",
-                "Mongoose",
-                "EJS",
-                "Bootstrap"
-            ],
-            "features": [
-                {
-                    "icon": "fas fa-shield-alt",
-                    "title": "Campus-Verified Auth",
-                    "desc": "Secure registration and login with bcrypt password hashing and express-session management"
-                },
-                {
-                    "icon": "fas fa-store",
-                    "title": "Listing Management",
-                    "desc": "Students create, browse, and manage product listings with image uploads via Multer"
-                },
-                {
-                    "icon": "fas fa-sitemap",
-                    "title": "RUP Methodology",
-                    "desc": "Developed following Rational Unified Process with iterative phases and structured documentation"
-                }
-            ],
-            "demoUrl": null,
-            "githubUrl": null
+            "description": "A verified online marketplace for university students to trade items. Developed solo using Node.js, Express, and MongoDB while following RUP methodology.",
+            "image": null
         },
         {
             "id": "campus-bites",
             "title": "Campus Bites",
             "status": "Completed",
-            "description": "A student recipe-sharing platform with role-based access control, content moderation workflow, and image security. Built with ASP.NET Core MVC and a team of developers following Agile practices.",
-            "image": "assets/projects/campus-bites-preview.png",
-            "techStack": [
-                "C#",
-                "ASP.NET Core MVC",
-                "Entity Framework Core",
-                "SQL Server",
-                "Bootstrap 5",
-                "Identity"
-            ],
-            "features": [
-                {
-                    "icon": "fas fa-user-shield",
-                    "title": "Role-Based Security",
-                    "desc": "Three-tier access: Anonymous visitors, Registered Users, and Administrators"
-                },
-                {
-                    "icon": "fas fa-tasks",
-                    "title": "Approval Workflow",
-                    "desc": "Recipes flow through Draft → Pending → Published with admin-gated approval"
-                },
-                {
-                    "icon": "fas fa-shield-alt",
-                    "title": "Image Security",
-                    "desc": "Uploaded images segregated and replaced with placeholders until admin verification"
-                }
-            ],
-            "demoUrl": null,
-            "githubUrl": null
+            "description": "A student-focused platform built with ASP.NET Core MVC. Key features include role-based access control, content moderation workflows, and secure image handling.",
+            "image": "assets/projects/campus-bites-preview.png"
         },
         {
             "id": "trivia-quest",
             "title": "TriviaQuest",
             "status": "Completed",
-            "description": "A real-time multiplayer trivia quiz game built with WebSockets for a Networking for Programmers course. Players compete head-to-head with configurable categories, difficulty levels, and live leaderboards.",
-            "image": null,
-            "techStack": [
-                "Node.js",
-                "Express",
-                "Socket.io",
-                "WebSockets",
-                "HTML/CSS/JS"
-            ],
-            "features": [
-                {
-                    "icon": "fas fa-bolt",
-                    "title": "Real-Time Multiplayer",
-                    "desc": "Socket.io WebSocket connections for instant question delivery, answer tracking, and live scoring"
-                },
-                {
-                    "icon": "fas fa-trophy",
-                    "title": "Live Leaderboard",
-                    "desc": "Dynamic player ranking with medal system, score tracking, and game-over summary"
-                },
-                {
-                    "icon": "fas fa-sliders-h",
-                    "title": "Configurable Settings",
-                    "desc": "Players choose trivia category, difficulty level, and number of rounds before starting"
-                }
-            ],
-            "demoUrl": null,
-            "githubUrl": null
+            "description": "A real-time trivia game utilizing WebSockets for live communication and leaderboards. Developed for a Networking course to support configurable categories and multiplayer syncing.",
+            "image": null
         },
         {
-            "id": null,
+            "id": "portfolio",
             "title": "Developer Portfolio",
             "status": "Live",
-            "description": "This website, a data-driven SPA built with vanilla JavaScript, Handlebars templating, and JSON data files. Features URL-param routing, system-aware dark mode, and a clean MVC-like architecture.",
-            "image": null,
-            "techStack": [
-                "JavaScript",
-                "Handlebars.js",
-                "Bootstrap 5",
-                "CSS3",
-                "GitHub Pages"
-            ],
-            "features": [
-                {
-                    "icon": "fas fa-code",
-                    "title": "SPA Architecture",
-                    "desc": "URL-param based routing with dynamic Handlebars template compilation and JSON data separation"
-                },
-                {
-                    "icon": "fas fa-moon",
-                    "title": "System-Aware Theming",
-                    "desc": "Dark/light toggle that follows OS preferences and respects user session overrides"
-                }
-            ],
-            "demoUrl": null,
-            "githubUrl": null
+            "description": "This site is a data-driven SPA built with Handlebars and JSON. It features custom URL-param routing and system-aware dark/light theming for a seamless user experience.",
+            "image": null
         }
     ]
 }

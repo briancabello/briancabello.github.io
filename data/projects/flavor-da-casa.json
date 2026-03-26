@@ -4,11 +4,10 @@
     "tagline": "Restaurant Reservation Management System",
     "status": "In Development",
     "heroImage": null,
-    "description": "A full-featured restaurant management platform handling event scheduling, seating configuration, dining table management, menu creation, and guest reservation workflows with email confirmations, built from the ground up using Spring Boot with strict Clean Architecture principles.",
+    "description": "A full-featured restaurant management platform handling event scheduling, seating configuration, dining table management, menu creation, and guest reservation workflows with email confirmations — built using Spring Boot with strict Clean Architecture principles.",
     "role": "Full-Stack Developer",
     "timeline": "Spring 2026",
     "team": "Brian Cabello & Matheus Camilo Ferraro",
-
     "techStack": [
         "Java",
         "Spring Boot",
@@ -19,14 +18,10 @@
         "Bootstrap 5",
         "Jira"
     ],
-
     "demoUrl": "",
     "githubUrl": "",
-
-    "challenge": "Building a restaurant management system that handles the full complexity of event scheduling, dynamic seating arrangements, dining table configuration with capacity tracking, menu management, and a multi-step reservation workflow, all while maintaining strict Clean Architecture boundaries across multiple developers. The project also needed to expose a REST API layer for third-party integrations and follow Agile practices through Jira Sprints with a structured Git branching strategy.",
-
-    "solution": "We designed the system using Clean Architecture with four distinct layers: Domain (DTOs and business entities), Application (service interfaces, validation logic, and business rules), Infrastructure (JPA repositories and MySQL persistence with entity mapping), and Presentation (Spring MVC controllers and Thymeleaf views). Each layer enforces strict dependency rules, inner layers never depend on outer layers. The reservation workflow validates event existence, seating availability, and guest data before generating UUID based confirmations. REST API controllers expose events, menus, and reservations as JSON endpoints. We managed the entire project through Jira with user stories, subtasks, and Sprint cycles.",
-
+    "challenge": "Building a restaurant management system that handles the full complexity of event scheduling, dynamic seating arrangements, dining table configuration with capacity tracking, menu management, and a multi-step reservation workflow — all while maintaining strict Clean Architecture boundaries across multiple developers. The project also needed to expose a REST API layer for third-party integrations and follow Agile practices through Jira Sprints with a structured Git branching strategy.",
+    "solution": "We designed the system using Clean Architecture with four distinct layers: Domain (DTOs and business entities), Application (service interfaces, validation logic, and business rules), Infrastructure (JPA repositories and MySQL persistence with entity mapping), and Presentation (Spring MVC controllers and Thymeleaf views). Each layer enforces strict dependency rules — inner layers never depend on outer layers. The reservation workflow validates event existence, seating availability, and guest data before generating UUID-based confirmations. REST API controllers expose events, menus, and reservations as JSON endpoints. We managed the entire project through Jira with user stories, subtasks, and Sprint cycles.",
     "features": [
         {
             "icon": "fas fa-layer-group",
@@ -66,11 +61,8 @@
         {
             "icon": "fas fa-project-diagram",
             "title": "Agile with Jira",
-            "desc": "Sprint-managed development with user stories, subtasks, and a Git branching strategy (main → sprint → feature branches) with Pull Request reviews."
+            "desc": "Sprint-managed development with user stories, subtasks, and a Git branching strategy (main → sprint → feature branches) with PR reviews."
         }
     ],
-
-    "images": {
-        "showcase": null
-    }
+    "images": { "showcase": null }
 }

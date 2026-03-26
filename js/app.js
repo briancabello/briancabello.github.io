@@ -102,7 +102,8 @@ class PortfolioApp {
         // Combine into one data object
         this.data = {
             about,
-            skills: skills.skills,
+            techIcons: skills.techIcons,
+            expertise: skills.expertise,
             projects: projects.projects,
             education: education.education,
             experiences: experience.experiences,
@@ -198,15 +199,12 @@ class PortfolioApp {
 
                 const target = document.querySelector(targetId);
                 if (target) {
-                    e.preventDefault();
-
-                    // Close mobile nav if open
                     const navCollapse = document.getElementById('navbarNav');
                     if (navCollapse && navCollapse.classList.contains('show')) {
                         const bsCollapse = bootstrap.Collapse.getInstance(navCollapse);
                         if (bsCollapse) bsCollapse.hide();
                     }
-
+                    e.preventDefault();
                     // Offset for the fixed Navbar (80px)
                     const headerOffset = 80;
                     const elementPosition = target.getBoundingClientRect().top;

@@ -5,56 +5,43 @@
       <div class="text-uppercase small text-success fw-bold mb-1">Technical Proficiency</div>
       <h2>
         <span class="border-bottom border-3 border-success pb-2">
-          Development Stack
+          Skills &amp; Expertise
         </span>
       </h2>
     </div>
 
-    <div class="row g-4 justify-content-center">
-      {{#each skills}}
-      <div class="col-lg-4 col-md-6">
-        
-        <div class="card h-100 border-0 shadow-sm bg-body-tertiary hover-lift hover-glow transition-all">
-          <div class="card-body p-4 text-center">
-            
-            <h5 class="fw-bold text-body-emphasis mb-4">
-              {{title}}
-            </h5>
-
-            <div class="row g-3 justify-content-center">
-              {{#each badges}}
-              <div class="col-4"> <div class="d-flex flex-column align-items-center h-100">
-                  
-                  <div class="mb-2 d-flex align-items-center justify-content-center bg-body shadow-sm rounded-circle p-2 position-relative icon-bubble" 
-                       style="width: 52px; height: 52px;">
-                    
-                    <img
-                      src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/{{icon}}/{{icon}}-original.svg"
-                      width="28"
-                      height="28"
-                      alt="{{name}}"
-                      loading="lazy"
-                      style="object-fit: contain;"
-                      onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
-                    />
-                    
-                    <i class="fas fa-code text-success fs-5" style="display:none;"></i>
-
-                  </div>
-                  
-                  <span class="text-body-secondary fw-medium lh-1" style="font-size: 0.7rem;">
-                    {{name}}
-                  </span>
-                  
-                </div>
-
-              </div>
-              {{/each}}
-            </div>
-
+    <!-- ICON STRIP -->
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-10">
+        <div class="d-flex flex-wrap justify-content-center align-items-center gap-4 py-4">
+          {{#each techIcons}}
+          <div class="tech-strip-icon" title="{{alt}}">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/{{icon}}/{{icon}}-original.svg"
+              width="52"
+              height="52"
+              alt="{{alt}}"
+              loading="lazy"
+              style="object-fit: contain;"
+              onerror="this.onerror=null; this.src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/{{icon}}/{{icon}}-plain.svg';"
+            />
           </div>
+          {{/each}}
         </div>
+      </div>
+    </div>
 
+    <!-- EXPERTISE CARDS -->
+    <div class="row g-4 justify-content-center">
+      {{#each expertise}}
+      <div class="col-md-6 col-lg-4">
+        <div class="text-center px-3 py-4">
+          <div class="expertise-icon-circle mx-auto mb-3">
+            <i class="{{icon}} fa-lg"></i>
+          </div>
+          <h5 class="fw-bold text-body-emphasis mb-3">{{title}}</h5>
+          <p class="text-body-secondary small mb-0">{{description}}</p>
+        </div>
       </div>
       {{/each}}
     </div>

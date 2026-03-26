@@ -1,112 +1,66 @@
 {
-    "skills": [
+    "techIcons": [
+        { "icon": "csharp", "alt": "C#" },
+        { "icon": "java", "alt": "Java" },
+        { "icon": "javascript", "alt": "JavaScript" },
+        { "icon": "typescript", "alt": "TypeScript" },
+        { "icon": "php", "alt": "PHP" },
+        { "icon": "dotnetcore", "alt": ".NET" },
+        { "icon": "spring", "alt": "Spring Boot" },
+        { "icon": "html5", "alt": "HTML5" },
+        { "icon": "css3", "alt": "CSS3" },
+        { "icon": "swift", "alt": "Swift" },
+        { "icon": "kotlin", "alt": "Kotlin" },
+        { "icon": "nodejs", "alt": "Node.js" },
+        { "icon": "express", "alt": "Express" },
+        { "icon": "handlebars", "alt": "Handlebars" },
+        { "icon": "angularjs", "alt": "Angular" },
+        { "icon": "bootstrap", "alt": "Bootstrap" },
+        { "icon": "tailwindcss", "alt": "Tailwind CSS" },
+        { "icon": "microsoftsqlserver", "alt": "SQL Server" },
+        { "icon": "mysql", "alt": "MySQL" },
+        { "icon": "mongodb", "alt": "MongoDB" },
+        { "icon": "git", "alt": "Git" },
+        { "icon": "github", "alt": "GitHub" },
+        { "icon": "jira", "alt": "Jira" },
+        { "icon": "bash", "alt": "Bash" }
+    ],
+
+    "expertise": [
         {
-            "title": "Core Languages",
-            "badges": [
-                { "name": "C#", "icon": "csharp" },
-                { "name": "Java", "icon": "java" },
-                { "name": "JavaScript", "icon": "javascript" },
-                { "name": "TypeScript", "icon": "typescript" },
-                { "name": "PHP", "icon": "php" }
-            ]
+            "icon": "fas fa-code",
+            "title": "Full-Stack Web Development",
+            "description": "Developing end-to-end applications with a focus on MVC patterns and RESTful APIs. Creating responsive, mobile-first interfaces using modern CSS frameworks like Tailwind and efficient server-side rendering."
         },
         {
-            "title": "Architecture & Patterns",
-            "badges": [
-                { "name": "Clean Architecture", "icon": "archlinux" },
-                { "name": "MVC Pattern", "icon": "dotnetcore" },
-                { "name": "MVVM Pattern", "icon": "code" },
-                { "name": "RESTful APIs", "icon": "fastapi" },
-                { "name": "SOLID Principles", "icon": "code" }
-            ]
+            "icon": "fas fa-database",
+            "title": "Database Infrastructure",
+            "description": "Managing relational and NoSQL data structures across SQL Server, MySQL, and MongoDB. Utilizing ORM/ODM tools like JPA and Mongoose for efficient data persistence and schema management."
         },
         {
-            "title": "Microsoft / .NET",
-            "badges": [
-                { "name": "ASP.NET Core", "icon": "dotnetcore" },
-                {
-                    "name": "Entity Framework Core",
-                    "icon": "entityframeworkcore"
-                },
-                { "name": "Razor Views", "icon": "dotnetcore" }
-            ]
+            "icon": "fas fa-code-branch",
+            "title": "DevOps & Tooling",
+            "description": "Streamlining development with Git/GitHub through structured branching strategies. Managing project lifecycles via Jira and automating routine tasks with Bash scripting for smoother workflows."
         },
         {
-            "title": "Java Ecosystem",
-            "badges": [
-                { "name": "Java", "icon": "java" },
-                { "name": "Spring Boot", "icon": "spring" },
-                { "name": "JPA (Hibernate)", "icon": "hibernate" },
-                { "name": "Thymeleaf", "icon": "html5" },
-                { "name": "Servlets & JSP", "icon": "java" }
-            ]
-        },
-        {
+            "icon": "fas fa-mobile-alt",
             "title": "Mobile Development",
-            "badges": [
-                { "name": "Swift", "icon": "swift" },
-                { "name": "SwiftUI", "icon": "swift" },
-                { "name": "Kotlin", "icon": "kotlin" },
-                { "name": "Android Studio", "icon": "androidstudio" },
-                { "name": "Apple / iOS", "icon": "apple" }
-            ]
+            "description": "Building native applications for iOS (Swift) and Android (Kotlin). Focused on applying responsive design principles and consistent UI patterns to create seamless mobile experiences."
         },
         {
-            "title": "Backend & Web Development",
-            "badges": [
-                { "name": "Node.js", "icon": "nodejs" },
-                { "name": "Express.js", "icon": "express" },
-                { "name": "Handlebars (HBS)", "icon": "handlebars" },
-                { "name": "EJS", "icon": "javascript" }
-            ]
+            "icon": "fas fa-layer-group",
+            "title": "Architecture & Patterns",
+            "description": "Applying Clean Architecture principles and strict layer separation to ensure code maintainability. Utilizing Repository, DTO, and Service patterns to build testable and scalable software."
         },
         {
-            "title": "Frontend & UI",
-            "badges": [
-                { "name": "Angular", "icon": "angularjs" },
-                { "name": "HTML5", "icon": "html5" },
-                { "name": "CSS3", "icon": "css3" },
-                { "name": "Bootstrap", "icon": "bootstrap" },
-                { "name": "Tailwind CSS", "icon": "tailwindcss" }
-            ]
+            "icon": "fas fa-windows",
+            "title": "Microsoft / .NET",
+            "description": "Constructing web applications using ASP.NET Core MVC, Entity Framework, and Razor Pages. Implementing secure authentication via Identity and managing data persistence through SQL Server."
         },
         {
-            "title": "Databases",
-            "badges": [
-                { "name": "SQL Server", "icon": "microsoftsqlserver" },
-                { "name": "MySQL", "icon": "mysql" },
-                { "name": "MongoDB", "icon": "mongodb" }
-            ]
-        },
-        {
-            "title": "DevOps & Tools",
-            "badges": [
-                { "name": "Git", "icon": "git" },
-                { "name": "GitHub", "icon": "github" },
-                { "name": "Jira", "icon": "jira" }
-            ]
-        },
-        {
-            "title": "IDEs & Editors",
-            "badges": [
-                { "name": "Visual Studio", "icon": "visualstudio" },
-                { "name": "VS Code", "icon": "vscode" },
-                { "name": "IntelliJ IDEA", "icon": "intellij" }
-            ]
-        },
-        {
-            "title": "CLI & Scripting",
-            "badges": [{ "name": "Bash", "icon": "bash" }]
-        },
-        {
-            "title": "Learning & Exploring",
-            "badges": [
-                { "name": "Python", "icon": "python" },
-                { "name": "Vue.js", "icon": "vuejs" },
-                { "name": "Laravel", "icon": "laravel" },
-                { "name": "Docker", "icon": "docker" },
-                { "name": "React", "icon": "react" }
-            ]
+            "icon": "fas fa-leaf",
+            "title": "Java Ecosystem",
+            "description": "Developing applications with Spring Boot, Thymeleaf, and Spring Data JPA. Experienced in multi-module project structures and utilizing Hibernate ORM for robust relational data management."
         }
     ]
 }
