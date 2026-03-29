@@ -26,7 +26,7 @@
             "title": "TriviaQuest",
             "status": "Completed",
             "description": "A real-time trivia game utilizing WebSockets for live communication and leaderboards. Developed for a Networking course to support configurable categories and multiplayer syncing.",
-            "image": null
+            "image": "assets/projects/trivia-quest-gameover.png"
         },
         {
             "id": "portfolio",

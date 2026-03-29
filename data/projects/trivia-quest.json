@@ -3,7 +3,7 @@
     "title": "TriviaQuest",
     "tagline": "Real-Time Multiplayer Quiz Game",
     "status": "Completed",
-    "heroImage": null,
+    "heroImage": "assets/projects/trivia-quest-hero.png",
     "description": "A multiplayer trivia quiz game built with WebSockets for a Networking for Programmers course. Multiple players connect simultaneously, compete through configurable quiz rounds, and see live leaderboard updates in real time.",
     "role": "Full-Stack Developer",
     "timeline": "Spring 2026",
@@ -52,5 +52,5 @@
             "desc": "Game-over screen with final scores, winner announcement, and automatic redirect to lobby for replay."
         }
     ],
-    "images": { "showcase": null }
+    "images": { "showcase": "assets/projects/trivia-quest-showcase.png" }
 }
