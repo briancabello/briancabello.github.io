@@ -68,6 +68,7 @@
 <!-- BODY -->
 <main class="container py-5">
     
+    <!-- HERO IMAGE -->
     {{#if heroImage}}
     <div class="mb-5 animate-fade-up" style="animation-delay: 0.35s;">
         <div class="overflow-hidden rounded-3 shadow-sm border border-secondary border-opacity-10 bg-body-tertiary">
@@ -117,9 +118,28 @@
     </div>
     {{/if}}
 
+    <!-- PROJECT GALLERY -->
+    {{#if gallery}}
+    <div class="border-top border-secondary border-opacity-10 pt-5 mb-5 animate-fade-up" style="animation-delay: 0.55s;">
+        <h3 class="fw-bold mb-4 text-body-emphasis">Project Gallery</h3>
+        <div class="row g-4">
+            {{#each gallery}}
+            <div class="col-md-6">
+                <div class="overflow-hidden rounded-3 border border-secondary border-opacity-10 bg-body-tertiary shadow-sm">
+                    <img src="{{this.src}}" alt="{{this.caption}}" class="w-100 object-fit-cover" style="height: 260px;" loading="lazy">
+                </div>
+                {{#if this.caption}}
+                <p class="text-body-secondary small mt-2 mb-0 text-center">{{this.caption}}</p>
+                {{/if}}
+            </div>
+            {{/each}}
+        </div>
+    </div>
+    {{/if}}
+
     <!-- KEY FEATURES -->
     {{#if features}}
-    <div class="border-top border-secondary border-opacity-10 pt-5 mb-5 animate-fade-up" style="animation-delay: 0.55s;">
+    <div class="border-top border-secondary border-opacity-10 pt-5 mb-5 animate-fade-up" style="animation-delay: 0.6s;">
         <h3 class="fw-bold mb-4 text-body-emphasis">Key Features</h3>
         <div class="row g-4">
             {{#each features}}

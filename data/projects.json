@@ -3,9 +3,9 @@
         {
             "id": "flavor-da-casa",
             "title": "Flavor da Casa",
-            "status": "In Development",
-            "description": "A full-stack management system built with Spring Boot and Clean Architecture. It handles event scheduling, seating, and guest reservations through a custom REST API.",
-            "image": null
+            "status": "Completed",
+            "description": "A multi-module restaurant reservation platform featuring Spring Security authentication, a reservation approval workflow, email notifications, a Swagger-documented REST API, and a Clean Architecture backend, all managed via Jira Sprints.",
+            "image": "assets/projects/flavor-da-casa-hero.png"
         },
         {
             "id": "unicycle-marketplace",

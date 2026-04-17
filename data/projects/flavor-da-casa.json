@@ -1,68 +1,118 @@
 {
     "id": "flavor-da-casa",
     "title": "Flavor da Casa",
-    "tagline": "Restaurant Reservation Management System",
-    "status": "In Development",
-    "heroImage": null,
-    "description": "A full-featured restaurant management platform handling event scheduling, seating configuration, dining table management, menu creation, and guest reservation workflows with email confirmations — built using Spring Boot with strict Clean Architecture principles.",
+    "tagline": "Multi-Module Restaurant Reservation Platform",
+    "status": "Completed",
+    "heroImage": "assets/projects/flavor-da-casa-hero.png",
+    "description": "A production-grade restaurant reservation system built as a multi-module Maven project with Spring Boot. Features Spring Security authentication with JWT-protected REST APIs, a full reservation workflow with approval/denial and automated email notifications, menu management with items, seating, and dining table configuration, and Swagger API documentation, all following strict Clean Architecture principles across separate application modules.",
     "role": "Full-Stack Developer",
     "timeline": "Spring 2026",
     "team": "Brian Cabello & Matheus Camilo Ferraro",
+
     "techStack": [
-        "Java",
+        "Java 21",
         "Spring Boot",
+        "Spring Security",
+        "JWT / OAuth2",
         "Thymeleaf",
-        "Clean Architecture",
+        "Spring Data JPA",
         "MySQL",
+        "Clean Architecture",
         "REST API",
+        "Swagger / OpenAPI",
+        "Maven (Multi-Module)",
         "Bootstrap 5",
         "Jira"
     ],
+
     "demoUrl": "",
     "githubUrl": "",
-    "challenge": "Building a restaurant management system that handles the full complexity of event scheduling, dynamic seating arrangements, dining table configuration with capacity tracking, menu management, and a multi-step reservation workflow — all while maintaining strict Clean Architecture boundaries across multiple developers. The project also needed to expose a REST API layer for third-party integrations and follow Agile practices through Jira Sprints with a structured Git branching strategy.",
-    "solution": "We designed the system using Clean Architecture with four distinct layers: Domain (DTOs and business entities), Application (service interfaces, validation logic, and business rules), Infrastructure (JPA repositories and MySQL persistence with entity mapping), and Presentation (Spring MVC controllers and Thymeleaf views). Each layer enforces strict dependency rules — inner layers never depend on outer layers. The reservation workflow validates event existence, seating availability, and guest data before generating UUID-based confirmations. REST API controllers expose events, menus, and reservations as JSON endpoints. We managed the entire project through Jira with user stories, subtasks, and Sprint cycles.",
+
+    "challenge": "Building a restaurant management platform that goes beyond basic CRUD, handling a multi-step reservation workflow (request → pending → approve/deny), enforcing authentication for staff operations while keeping the guest-facing reservation form public, sending automated email notifications on status changes, and exposing a separate stateless REST API with JWT bearer token authentication for third-party integrations. All of this needed to maintain strict Clean Architecture boundaries across a multi-module Maven project with shared common libraries, while being developed collaboratively through Jira Sprint cycles.",
+   
+    "solution": "We architected the system as a multi-module Maven project with clear module separation: a shared common library (common-domain, common-application, common-web, common-infrastructure), a restaurant module (domain, application, infrastructure, web), an authentication module (auth-domain, auth-application, auth-persistence), and two runnable applications, app-web (Thymeleaf UI on port 8080) and app-restaurant-rest-api (stateless JWT API on port 8081). Spring Security handles form-based login for the web UI and enforces @PreAuthorize on staff-only endpoints, while the REST API uses an OAuth2 resource server with RSA key-pair JWT validation. The reservation workflow validates event/seating existence, creates a UUID-tracked reservation in PENDING status, sends a confirmation email, and then allows authenticated staff to approve (with table assignment) or deny, each triggering a status update email to the guest. Swagger/OpenAPI documentation is auto-generated for all API endpoints.",
+    
     "features": [
         {
             "icon": "fas fa-layer-group",
-            "title": "Clean Architecture",
-            "desc": "Four-layer architecture (Domain → Application → Infrastructure → Presentation) with strict dependency inversion and separation of concerns."
+            "title": "Multi-Module Clean Architecture",
+            "desc": "Maven multi-module project with shared common libraries. Each module (restaurant, auth, common) has its own Domain, Application, Infrastructure, and Presentation layers with strict dependency inversion."
         },
         {
-            "icon": "fas fa-calendar-alt",
-            "title": "Event Management",
-            "desc": "Full CRUD for restaurant events with server-side validation, date conflict detection, duration defaults, and capacity constraints."
+            "icon": "fas fa-lock",
+            "title": "Spring Security Authentication",
+            "desc": "Form-based login for the web UI with @PreAuthorize annotations on staff-only endpoints. Public access for guest reservation requests and menu browsing."
         },
         {
-            "icon": "fas fa-chair",
-            "title": "Seating & Table System",
-            "desc": "Dynamic seating management with table assignments (many-to-many), capacity tracking, time-slotted availability, and cascade delete handling."
-        },
-        {
-            "icon": "fas fa-utensils",
-            "title": "Menu Management",
-            "desc": "Full CRUD for menus and menu items with descriptions, creation date tracking, and organized category display on the reservation form."
+            "icon": "fas fa-key",
+            "title": "JWT-Protected REST API",
+            "desc": "Separate stateless REST API application (port 8081) secured with OAuth2 Resource Server and RSA key-pair JWT validation. Bearer token authentication for all protected endpoints."
         },
         {
             "icon": "fas fa-concierge-bell",
-            "title": "Reservation Workflow",
-            "desc": "Multi-step guest reservations: select event → choose seating → enter guest details → server-side validation → UUID-based email confirmation."
+            "title": "Reservation Approval Workflow",
+            "desc": "Multi-step flow: guest submits request → PENDING status with UUID confirmation → staff reviews with table assignment → APPROVED or DENIED. Each transition triggers validation and email notification."
         },
         {
-            "icon": "fas fa-plug",
-            "title": "REST API Layer",
-            "desc": "EventApiController, MenuApiController, and ReservationApiController exposing data as JSON endpoints for external consumption."
+            "icon": "fas fa-envelope",
+            "title": "Automated Email Notifications",
+            "desc": "EmailService sends formatted reservation confirmations on request, approval notifications with reservation details, and denial notifications, all with dynamic content such as event name, seating time, and confirmation code."
+        },
+        {
+            "icon": "fas fa-utensils",
+            "title": "Menu & Item Management",
+            "desc": "Full CRUD for menus and menu items with descriptions (e.g., Chef's Tasting Menu with courses: Amuse-Bouche, Bisque, Main). Menus link to events and display on the reservation form."
+        },
+        {
+            "icon": "fas fa-chair",
+            "title": "Seating & Dining Table System",
+            "desc": "Seating CRUD with table assignments (many-to-many via SeatingTableEntity), capacity tracking, overlapping seating conflict detection, and cascade delete management."
+        },
+        {
+            "icon": "fas fa-filter",
+            "title": "Reservation List with Filtering",
+            "desc": "Staff dashboard with reservation list filterable by event and status (PENDING / APPROVED / DENIED). Detail view shows full guest info, event, seating, and table assignment controls."
+        },
+        {
+            "icon": "fas fa-book-open",
+            "title": "Swagger / OpenAPI Documentation",
+            "desc": "Auto-generated API documentation via SpringDoc OpenAPI with bearer token authentication scheme configured for all protected endpoints."
+        },
+        {
+            "icon": "fas fa-database",
+            "title": "Data Initialization Service",
+            "desc": "InitializeDataServiceImpl seeds the database with default dining tables, events, seatings, menus, and menu items on first startup, enabling immediate demo readiness."
         },
         {
             "icon": "fas fa-check-double",
             "title": "Validation Framework",
-            "desc": "Custom ValidationService pattern with Result/ValidatedResult wrapper types, field-level error binding, and BindingResult integration."
+            "desc": "Custom ValidationService pattern per entity with Result/ValidatedResult wrapper types, field-level error binding to BindingResult, and dedicated validation services for Events, Seatings, Menus, MenuItems, DiningTables, and Reservations."
         },
         {
             "icon": "fas fa-project-diagram",
             "title": "Agile with Jira",
-            "desc": "Sprint-managed development with user stories, subtasks, and a Git branching strategy (main → sprint → feature branches) with PR reviews."
+            "desc": "Sprint-managed development with user stories, subtasks, and a Git branching strategy (main → sprint → feature branches) with Pull Request reviews between team members."
         }
     ],
-    "images": { "showcase": null }
+
+     "gallery": [
+        {
+            "src": "assets/projects/flavor-da-casa-list.png",
+            "caption": "Reservation Dashboard - filterable by event and status, with color-coded badges"
+        },
+        {
+            "src": "assets/projects/flavor-da-casa-api.png",
+            "caption": "Swagger API Documentation - JWT-secured REST endpoints"
+        },
+        {
+            "src": "assets/projects/flavor-da-casa-login.png",
+            "caption": "Spring Security Login - form-based authentication for staff"
+        },
+        {
+            "src": "assets/projects/flavor-da-casa-admin.png",
+            "caption": "Admin Dashboard - event listing with management controls"
+        }
+    ],
+
+    "images": { "showcase": "assets/projects/flavor-da-casa-showcase.png" }
 }
