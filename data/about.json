@@ -5,13 +5,11 @@
     "title": "Software Developer",
     "email": "brianc92622@gmail.com",
 
-    "//_comment": "HERO: Focuses on potential, growth, and enthusiasm.",
-    "summary": "Dedicated developer building a versatile foundation in full-stack and mobile platforms. Currently focused on mastering Java and .NET backend architectures while growing my front-end expertise through React. I am a detail-oriented problem solver who prioritizes industry best practices and continuous professional growth.",
+    "summary": "I am a versatile Software Developer focused on building modern web applications that blend strong engineering with intuitive design. I specialize in developing scalable, user-centered digital experiences throughout the entire development lifecycle. I am currently seeking a professional practicum where I can contribute my skills to forward-thinking engineering teams.",
 
-    "//_comment": "ABOUT: Focuses on the academic journey and transferable soft skills.",
     "bio": [
-        "I am currently completing my diploma in IT Software Development at NBCC, where I have dedicated myself to mastering the fundamentals of web and mobile platforms. My academic projects have given me hands-on experience with the full software lifecycle from architecting robust backends and databases to building native mobile applications and exploring dynamic web interfaces.",
-        "Before transitioning into tech, I spent years in team leadership and operations. Managing high-volume environments taught me the value of clear communication, adaptability, and reliability. I am excited to bring these professional qualities to a development team as I continue to evolve in this field.",
-        "I am the developer who reads the documentation thoroughly, refactors for clarity before moving on, and treats every code review as a valuable learning opportunity. I am currently seeking practicum and entry-level roles where I can contribute to meaningful projects and grow alongside a collaborative engineering team."
+        "I recently completed my IT Software Development program at NBCC, where I developed a solid foundation in designing and implementing complex full-stack applications. My primary focus is on modern web development—building responsive, high-performance interfaces supported by robust, maintainable back-end systems.",
+        "I view great software as the intersection of clean, reliable code and thoughtful, user-first design. Whether I’m designing a backend API or refining a user interface, I prioritize user experience, performance, and accessibility to deliver high-quality digital products.",
+        "With a background in team leadership and operations, I value clear communication, accountability, and adaptability. I am seeking a professional practicum placement where I can apply my combined strengths in development and design to solve real-world problems within a collaborative, growth-oriented team."
     ]
 }

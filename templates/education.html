@@ -1,9 +1,12 @@
 <section id="education" class="py-5">
   <div class="container">
     
-    <h2 class="mb-5 text-start">
-      <span class="border-bottom border-3 border-success pb-2">Education</span>
-    </h2>
+    <div class="mb-5">
+      <div class="text-uppercase small text-success fw-bold mb-1">Academic Background</div>
+      <h2>
+        <span class="border-bottom border-3 border-success pb-2">Education</span>
+      </h2>
+    </div>
 
     <div class="row justify-content-center">
       <div class="col-lg-10">
@@ -21,28 +24,28 @@
               <div class="card-body p-4">
                 <div class="d-flex justify-content-between align-items-start flex-wrap mb-2">
                   <div>
-                    <h3 class="card-title fw-bold text-body-emphasis mb-1">{{education.currentEducation.program}}</h3>
-                    <div class="h5 text-success mb-0">{{education.currentEducation.institution}}</div>
+                    <h3 class="card-title fw-bold text-body-emphasis mb-1 fs-5 fs-md-4">{{education.currentEducation.program}}</h3>
+                    <div class="h6 text-success mb-0">{{education.currentEducation.institution}}</div>
                   </div>
                   
                   <div class="text-md-end mt-2 mt-md-0">
                     <span class="badge bg-success text-white px-3 py-2 rounded-pill shadow-sm mb-2">
-                       Currently Enrolled
+                      Coursework Finished
                     </span>
                     <div class="text-secondary fw-bold small text-uppercase">
                       {{education.currentEducation.period}}
                     </div>
                   </div>
                 </div>
-                <p class="mt-3 mb-0 text-body-secondary border-top border-secondary border-opacity-10 pt-3">
-                  <i class="fas fa-code me-2 text-success"></i>{{education.currentEducation.description}}
+                <p class="mt-3 mb-0 text-body-secondary small border-top border-secondary border-opacity-10 pt-3">
+                  {{education.currentEducation.description}}
                 </p>
               </div>
             </div> 
           </div>
 
           <div class="ps-2"> 
-            <h6 class="text-uppercase text-body-secondary fw-bold opacity-50 mb-4 ls-1">Prior Qualification</h6>
+            <h6 class="text-uppercase text-body-secondary fw-bold opacity-50 mb-4 ls-1">Prior Qualifications</h6>
 
             {{#each education.additionalEducation}}
             <div class="position-relative mb-4">
